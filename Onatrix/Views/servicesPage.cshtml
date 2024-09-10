@@ -2,12 +2,15 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = "mainLayout.cshtml";
-     ViewBag.Title = Model?.Value("pageTitle") ?? null;
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
 
-  var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
-    
+    var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
 }
 
+
+
+
+@*----------Nour/Fix Name-----------*@
 <section id="about" class="banner bg-gray">
     <div class="background"> 
         <img src="@aboutBackgroundImage" alt="Backround image">
@@ -22,10 +25,15 @@
     </div>
 </section>
 
+
+
 @*----------our-services-----------*@
 @await Html.PartialAsync("partials/static/our-services.cshtml")
 
 
+
+
+@*----------next-project-----------*@
 @await Html.PartialAsync("partials/static/next-project.cshtml")
 
 
