@@ -6,12 +6,21 @@
 
     var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
     var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
+
+
+@*
     var serviceSolution1Image = Model?.Value<IPublishedContent>("serviceSolution1Image")?.Url() ?? "";
     var serviceSolution2Image = Model?.Value<IPublishedContent>("serviceSolution2Image")?.Url() ?? "";
     var serviceSolution3Image = Model?.Value<IPublishedContent>("serviceSolution3Image")?.Url() ?? "";
     var serviceSolution4Image = Model?.Value<IPublishedContent>("serviceSolution4Image")?.Url() ?? "";
     var serviceSolution5Image = Model?.Value<IPublishedContent>("serviceSolution5Image")?.Url() ?? "";
     var serviceSolution6Image = Model?.Value<IPublishedContent>("serviceSolution6Image")?.Url() ?? "";
+    *@
+
+
+
+
+
     var weAreImage = Model?.Value<IPublishedContent>("weAreImage")?.Url() ?? "";
     var successImage = Model?.Value<IPublishedContent>("successImage")?.Url() ?? "";
     var projectsProject1Image = Model?.Value<IPublishedContent>("projectsProject1Image")?.Url() ?? "";
@@ -65,6 +74,7 @@
     </div>
 </section>
 
+@*
 <section id="our-services" class="our-services">
     <div class="bg-gray">
         <div class="container">
@@ -131,6 +141,9 @@
         </div>
     </div>
 </section>
+*@
+
+@await Html.PartialAsync("partials/static/our-services.cshtml")
 
 <section id="we-are" class="we-are">
     <div class="container">
