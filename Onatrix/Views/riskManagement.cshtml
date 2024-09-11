@@ -3,8 +3,22 @@
 @{
 	Layout = "mainLayout.cshtml";
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
-       var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
+    var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
+    var rightSectionImage01        = Model?.Value<IPublishedContent>("rightSectionImage01")?.Url() ?? "";
+    var rightSectionImage02   = Model?.Value<IPublishedContent>("rightSectionImage02")?.Url() ?? "";
+    var leftSectionImage01   = Model?.Value<IPublishedContent>("leftSectionImage01")?.Url() ?? "";
+    var leftSectionImage02   = Model?.Value<IPublishedContent>("leftSectionImage02")?.Url() ?? "";
+   
+
+   
 }
+
+
+@*
+
+@Model?.Value("xxxxxxx")
+
+*@
 
 <section id="about" class="banner bg-gray">
     <div class="background"> 
@@ -21,79 +35,77 @@
 </section>
 
 
+    
             <section id="solution-item">
                 <div class="container">
                     <div class="content">
                         <nav class="about-us">
-                            <h4>About us</h4>
+                            <h4>@Model?.Value("leftSectionHeadline01")</h4>
                             <div class="image">
-                                <img src="images/services/image-24-min 2.png" alt="">
+                                <img src=@leftSectionImage01 alt="leftSectionImage01">
                             </div>
-                            <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
-            
+                            <p>@Model?.Value("leftSectionText01")</p>
                             <div class="bg-primary">
-                                <h4>How can we help you?</h4>
-                                <p>online support 24/7, we are here to help you</p>
+                                <h4>@Model?.Value("leftSectionHeadline02")</h4>
+                                <p>@Model?.Value("leftSectionText02")</p>
                                 <div class="form">E-mail <i class="fa-light fa-envelope"></i></div>
                                 <div class="image">
-                                    <img src="images/services/Mail.svg" alt="">
+                                    <img src=@leftSectionImage02 alt="">
                                 </div>
                             </div>
                         </nav>
             
                         <div class="main-content">
                             <div class="image">
-                                <img src="images/services/image-21-min 2.png" alt="">
+                                <img src=@rightSectionImage01 alt="rightSectionImage01">
                             </div>
-                            <h4>key point</h4>
+                            <h4>@Model?.Value("rightSectionHeadline01")</h4>
                             <div class="list">
                                 <ul>
-                                    <li>Financial planning is the process of helping clients meet their financial needs today and reach their dreams and goals tomorrow.</li>
-                                    <li>Pellentesque fringilla augue quis dolor dapibus semper eget non nibh. Ut lobortis, nulla sed euismod posuere, quam magna scelerisque lectus, auctor iaculis quam ligula nec augue</li>
-                                    <li>In hac habitasse platea dictumst. Aliquam felis ante, tincidunt sed magna auctor, aliquet dapibus turpis.</li>
+                                    <li>@Model?.Value("rightSectionList0101")</li>
+                                    <li>@Model?.Value("rightSectionList0102")</li>
+                                    <li>@Model?.Value("rightSectionList0103")</li>
                                 </ul>
                             </div>
-            
-                            <h4>A financial plan is based on a personal relationship</h4>
-                            <p>
-                                No matter where you find yourself today or see yourself in the future, a financial planning relationship with an Ameriprise financial advisor can help you find your financial balance and bring your dreams and goals more within reach.
-            
-                                Our Confident Retirement approach to financial planning begins with a one-on-one conversation. At its core is a personal relationship with an advisor dedicated to helping you reach the future you imagine, on your own terms, in a way that is convenient for you.
-                                The financial planning process all starts with learning about you. Your advisor will take the time to:
-                            </p>
+                            <h4>@Model?.Value("rightSectionHeadline02")</h4>
+                            <p>@Model?.Value("rightSectionText02")</p>
                             <div class="list">
                                 <ul>
-                                    <li>Listen closely to you and learn what you value</li>
-                                    <li>Analyze your current financial situation</li>
-                                    <li>Understand your feelings about managing money and investments</li>
+                                    <li>@Model?.Value("rightSectionList0201")</li>
+                                    <li>@Model?.Value("rightSectionList0202")</li>
+                                    <li>@Model?.Value("rightSectionList0203")</li>
                                 </ul>
                             </div>
-                            <p>
-                                Then your advisor will offer personalized advice and guidance to help you reach your financial goals. Ameriprise advisors have access to a broad array of solutions to help you plan for your confident future.
-            
-                                And once you have a plan in place, you may feel more confident knowing that your advisor will stay with you over time, helping you track your progress toward your goals and making adjustments along the way when your life or dreams change.
-                            </p>
+                            <p> @Model?.Value("rightSectionText03")</p>
+
                             <div class="image">
-                                <img src="images/services/post2-1.png" alt="">
+                                <img src=@rightSectionImage02 alt="rightSectionImage02">
                             </div>
-                            <h4>We’ll help you achieve financial confidence</h4>
-                            <p>Working with a financial advisor may help you come away feeling more confident knowing that you have the support you need to help:</p>
+                            <h4>@Model?.Value("rightSectionHeadline03")</h4>
+                            <p>@Model?.Value("rightSectionText04")</p>
                             <div class="list">
-                                <ul>
-                                    <li>Cover your essentials. Essentials are the monthly expenses that keep your life running.</li>
-                                    <li>Ensure your lifestyle. Lifestyle is about the things that you want to do, and how you want to live, today and in the future.</li>
-                                    <li>Prepare for the unexpected. The unexpected are events that could derail your financial plans.</li>
-                                    <li>Leave a legacy. Legacy is about the impact you’ll make on the people, charities and causes that are important to you.</li>
-                                </ul>
+                              <ul>
+                                <li>@Model.Value("rightSectionList0301")</li>
+                                <li>@Model.Value("rightSectionList0302")</li>
+                                <li>@Model.Value("rightSectionList0303")</li>
+                                <li>@Model.Value("rightSectionList0304")</li>
+                            </ul>
+
                             </div> 
                         </div>
                     </div>
                     <div class="form">
-                        <h4>Have a question ?</h4>
+                        <h4>@Model?.Value("rightSectionHeadline04")</h4>
                         <a href="" class="btn btn-primary">Submit</a>
                     </div>
                 </div>
             
 
             </section>
+            
+
+
+
+@*----------next-project-----------*@
+@await Html.PartialAsync("partials/static/next-project.cshtml")
             
