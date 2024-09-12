@@ -7,8 +7,10 @@
     var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
     var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
 
-    var weAreImage = Model?.Value<IPublishedContent>("weAreImage")?.Url() ?? "";
-    var successImage = Model?.Value<IPublishedContent>("successImage")?.Url() ?? "";
+    var weAreImage1 = Model?.Value<IPublishedContent>("weAreImage1")?.Url() ?? "";
+    var weAreImage2 = Model?.Value<IPublishedContent>("weAreImage2")?.Url() ?? "";
+    var successImage1 = Model?.Value<IPublishedContent>("successImage1")?.Url() ?? "";
+    var successImage2 = Model?.Value<IPublishedContent>("successImage2")?.Url() ?? "";
     var projectsProject1Image = Model?.Value<IPublishedContent>("projectsProject1Image")?.Url() ?? "";
     var projectsProject2Image = Model?.Value<IPublishedContent>("projectsProject2Image")?.Url() ?? "";
     var projectsProject3Image = Model?.Value<IPublishedContent>("projectsProject3Image")?.Url() ?? "";
@@ -87,6 +89,8 @@
 @*----------our-services-----------*@
 @await Html.PartialAsync("partials/static/our-services.cshtml")
 
+
+@*----------we-are-----------*@
 <section id="we-are" class="we-are">
     <div class="container">
         <div class="content">
@@ -98,12 +102,17 @@
             </div>
         </div>
 
-        <div class="image">
-            <img src="@weAreImage" alt="Image of @Model?.Value("weAreHeadlineSecondRow")">
+        <div class="image1">
+            <img src="@weAreImage1" alt="">
+        </div>
+        <div class="image2">
+            <img src="@weAreImage2" alt="Image of @Model?.Value("weAreHeadlineSecondRow")">
         </div>
     </div>
 </section>
 
+
+@*----------success-----------*@
 <section id="success" class="success">
     <div class="bg-primary">
         <div class="container">
@@ -123,13 +132,18 @@
                     <h5>@Model?.Value("successStory3Text")</h5>
                 </div>
             </div>
-            <div class="image">
-                <img src="@successImage" alt="">
+            <div class="image1">
+                <img src="@successImage1" alt="">
+            </div>
+            <div class="image2">
+                <img src="@successImage2" alt="">
             </div>
         </div>
     </div>
 </section>
 
+
+@*----------our-services-----------*@
 <section id="our-projects" class="our-projects">
     <div class="container">
         <h6>@Model?.Value("projectsHeadline")</h6>

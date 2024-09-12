@@ -1,4 +1,4 @@
-#heru-slider {
+﻿#heru-slider {
     .background {
         display: block;
         height: 35rem;
@@ -268,6 +268,7 @@
 
                     .solution-item {
                         h5 {
+                            font-size: 1.5rem;
                             padding: 1rem;
                             margin: 0;
                         }
@@ -287,7 +288,7 @@
 
 
                         p {
-                            padding: 1rem;
+                            padding: 2rem;
                         }
                     }
                 }
@@ -301,13 +302,14 @@
 
 //We-are///////////////////////////////////////////
 #we-are {
-    margin-top: 6rem;
+    margin-top: 8rem;
 
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: relative;
 
         .content {
             display: flex;
@@ -315,6 +317,8 @@
             align-items: center;
             flex-direction: column;
             width: 50%;
+            position: relative; /* مهم لتفعيل z-index */
+            z-index: 1; /* وضعها فوق الصورة */
 
             h2 {
                 margin: 0;
@@ -330,10 +334,37 @@
             }
         }
 
-        .image {
+        .image1 {
+            width: 100%;
+            height: auto;
+            margin-top: -6rem;
+            margin-left: 33rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0; /* الصورة ستكون تحت المحتوى */
+            opacity: 0.35;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+
+            img {
+                width: 77%;
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+
+            &:hover {
+                opacity: 1;
+
+                img {
+                    transform: scale(0.9);
+                }
+            }
+        }
+
+        .image2 {
             width: 100%;
             height: auto;
             margin-top: 5rem;
+            z-index: 1;
 
             img {
                 width: 100%;
@@ -343,9 +374,15 @@
     }
 }
 
+
+
+
+//Success///////////////////////////////////////////
 #success {
     .bg-primary {
         padding-top: 6rem;
+        height: 60rem;
+        position: relative; 
 
         .container {
             display: flex;
@@ -353,12 +390,19 @@
             align-items: center;
             flex-direction: column;
             position: relative;
+          
+            h6, h2 {
+                position: relative;
+                z-index: 2; 
+                text-align: center;
+            }
 
             .success-stories {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 4rem;
+                z-index: 2; 
 
                 .success-story {
                     display: flex;
@@ -366,28 +410,45 @@
                     align-items: center;
                     flex-direction: column;
                     flex: 1;
-                    padding-bottom: 35rem;
+                   
 
                     h1 {
                         color: var(--color-secondary);
                         margin: 0;
+                        font-size: 5rem;
+                        font-weight: 600;
                     }
 
                     h5 {
                         text-align: center;
+                        font-weight: 400;
+                        font-size: 1.2rem;
                     }
                 }
             }
-
-            .image {
+            .image1 {
                 display: block;
                 width: 100%;
                 height: auto;
-                padding: 5rem;
                 position: absolute;
-                top: 15rem;
+                top: 1rem;
+                z-index: 1; 
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+           
+            .image2 {
+                display: block;
+                width: 100%;
+                height: auto;
+                padding: 4rem;
+                position: relative; 
+                top: 3rem;
                 right: 0;
-                z-index: 1;
+                z-index: 2;
 
                 img {
                     width: 100%;
@@ -398,6 +459,10 @@
     }
 }
 
+
+
+
+//Our-projects///////////////////////////////////////////
 #our-projects {
     margin-top: 16rem;
 

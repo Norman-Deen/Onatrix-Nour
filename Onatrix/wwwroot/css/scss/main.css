@@ -1,4 +1,5 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+﻿@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -1577,6 +1578,7 @@ h6 {
   background-color: var(--color-light);
 }
 #our-services .bg-gray .container .solution a .solution-item h5 {
+  font-size: 1.5rem;
   padding: 1rem;
   margin: 0;
 }
@@ -1590,17 +1592,18 @@ h6 {
   filter: brightness(0.5);
 }
 #our-services .bg-gray .container .solution a .solution-item p {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 #we-are {
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 #we-are .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 #we-are .container .content {
   display: flex;
@@ -1608,6 +1611,8 @@ h6 {
   align-items: center;
   flex-direction: column;
   width: 50%;
+  position: relative; /* مهم لتفعيل z-index */
+  z-index: 1; /* وضعها فوق الصورة */
 }
 #we-are .container .content h2 {
   margin: 0;
@@ -1619,18 +1624,43 @@ h6 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-#we-are .container .image {
+#we-are .container .image1 {
+  width: 100%;
+  height: auto;
+  margin-top: -6rem;
+  margin-left: 33rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* الصورة ستكون تحت المحتوى */
+  opacity: 0.35;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+#we-are .container .image1 img {
+  width: 77%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+#we-are .container .image1:hover {
+  opacity: 1;
+}
+#we-are .container .image1:hover img {
+  transform: scale(0.9);
+}
+#we-are .container .image2 {
   width: 100%;
   height: auto;
   margin-top: 5rem;
+  z-index: 1;
 }
-#we-are .container .image img {
+#we-are .container .image2 img {
   width: 100%;
   height: auto;
 }
 
 #success .bg-primary {
   padding-top: 6rem;
+  height: 60rem;
+  position: relative;
 }
 #success .bg-primary .container {
   display: flex;
@@ -1639,11 +1669,17 @@ h6 {
   flex-direction: column;
   position: relative;
 }
+#success .bg-primary .container h6, #success .bg-primary .container h2 {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
 #success .bg-primary .container .success-stories {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  z-index: 2;
 }
 #success .bg-primary .container .success-stories .success-story {
   display: flex;
@@ -1651,26 +1687,41 @@ h6 {
   align-items: center;
   flex-direction: column;
   flex: 1;
-  padding-bottom: 35rem;
 }
 #success .bg-primary .container .success-stories .success-story h1 {
   color: var(--color-secondary);
   margin: 0;
+  font-size: 5rem;
+  font-weight: 600;
 }
 #success .bg-primary .container .success-stories .success-story h5 {
   text-align: center;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
-#success .bg-primary .container .image {
+#success .bg-primary .container .image1 {
   display: block;
   width: 100%;
   height: auto;
-  padding: 5rem;
   position: absolute;
-  top: 15rem;
-  right: 0;
+  top: 1rem;
   z-index: 1;
 }
-#success .bg-primary .container .image img {
+#success .bg-primary .container .image1 img {
+  width: 100%;
+  height: auto;
+}
+#success .bg-primary .container .image2 {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 4rem;
+  position: relative;
+  top: 3rem;
+  right: 0;
+  z-index: 2;
+}
+#success .bg-primary .container .image2 img {
   width: 100%;
   height: auto;
 }
