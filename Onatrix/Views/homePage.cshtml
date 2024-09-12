@@ -52,31 +52,32 @@
             </div>
         </div>
         
-        @*----------call-back-form-----------*@
-             <form class="call-back-form">
-                        <div class="form-header bg-primary">
-                            <h3>Request a call back</h3>
-                        </div>
-                        <div class="form-content">
-                            <p class="form-ingress">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat</p>
-                            <input placeholder="Name"/>
-                            <input placeholder="Email Address"/>
-                            <input placeholder="Phone"/>
-                            <select>
-                                <option value="" disabled selected>Choose an option</option>
-                                <option value="option1">Option 1</option>
-                                <option value="option2">Option 2</option>
-                                <option value="option3">Option 3</option>
-                            </select>
-                            <button class="btn-accent">Submit</button>
-                        </div>
-                    </form>
 
-          @*          
-        <div class="form-container">
-            <div class="box"></div>
+    <!----------Request a call back---------->
+    <div class="call-box">
+        <div class="box-header">
+            <h3>Request a call back</h3>
         </div>
-        *@
+        <form>
+            <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat</p>
+            <input type="text" placeholder="Name"></input>
+            <input type="email" placeholder="Email address"></input>
+            <input type="number" placeholder="Phone"></input>
+            <div class="select-wrapper">
+            <div class="select">
+                <div class="select_trigger"><span>Financial consulting</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="options">
+                    <span class=" selected" data-value="Financial consulting">Financial consulting</span>
+                    <span class="option" data-value="Financial consulting 1">Financial consulting 1</span>
+                    <span class="option" data-value="Financial consulting 2">Financial consulting 2</span>
+                </div>
+            </div>
+            </div>
+            <button  type="submit" class="btn-accent">Submit</button>
+        </form>
+    </div>
 
         
     </div>

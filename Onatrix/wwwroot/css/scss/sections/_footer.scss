@@ -3,27 +3,16 @@
         display: flex;
         justify-content: start;
         align-items: center;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-
+        padding-top: 1rem;
 
         .rights {
-            display: none;
-
-            @include tablet {
-                display: block;
-                color: var(--color-light);
-                margin-right: 0.5rem;
-            }
+            display: block;
+            color: var(--color-primary);
         }
 
-        .rights-mobile {
+        .left {
+            margin-left: 0.5rem;
             color: var(--color-light);
-            margin-right: 0.5rem;
-
-            @include tablet {
-                display: none;
-            }
         }
     }
 }
