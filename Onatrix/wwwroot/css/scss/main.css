@@ -1351,28 +1351,28 @@ h6 {
   color: var(--color-light);
 }
 
-#heru-slider .background {
+#hero-slider .background {
   display: block;
   height: 35rem;
 }
-#heru-slider .container {
+#hero-slider .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#heru-slider .container .hero-content {
+#hero-slider .container .hero-content {
   width: 50%;
 }
-#heru-slider .container .hero-content .headline {
+#hero-slider .container .hero-content .headline {
   font-weight: 700;
   margin-top: 7rem;
   line-height: 110%;
 }
-#heru-slider .container .hero-content .ingress {
+#hero-slider .container .hero-content .ingress {
   font-size: large;
   margin-top: 1.5rem;
 }
-#heru-slider .container .hero-content div .btn {
+#hero-slider .container .hero-content div .btn {
   margin-bottom: 5rem;
   font-weight: 750;
 }
@@ -1813,128 +1813,89 @@ h6 {
   height: auto;
 }
 
-/*#about {
-    .background {
-        position: relative;
-
-        img {
-            width: 100%;
-            height: 245px;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-
-            .links {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-
-                .home {
-                    text-decoration: none;
-                    color: var(--color-primary);
-                }
-
-                .activ {
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-}*/
-@media (min-width: 1400px) {
-  #tina .container {
-    padding-top: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-  }
+#ceo .container {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
-#tina .container .tina-image {
+#ceo .container .ceo-image {
   width: 100%;
   flex: 1;
   padding: 2rem;
 }
-#tina .container .tina-image img {
+#ceo .container .ceo-image img {
   width: 100%;
   height: auto;
 }
-#tina .container .tina-image h5 {
+#ceo .container .ceo-image h5 {
   font-weight: 400;
   font-style: oblique;
   margin-top: 1rem;
 }
-#tina .container .tina-text {
+#ceo .container .ceo-text {
   flex: 2;
   padding: 2rem;
 }
-#tina .container .tina-text h4 {
+#ceo .container .ceo-text h4 {
   font-weight: 400;
   font-style: oblique;
 }
-#tina .container .tina-text h6 {
+#ceo .container .ceo-text h6 {
+  margin-top: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: var(--color-primary);
-  line-height: 2;
+  line-height: 1.75;
 }
 
-#kevin {
+#reviews {
   position: relative;
   height: 500px;
+  margin-top: 8rem;
 }
-@media (min-width: 1400px) {
-  #kevin .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-  }
+#reviews .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
-#kevin .container .content {
-  margin-top: 3rem;
+#reviews .container .content {
+  margin-top: 5rem;
+  width: 50%;
+  padding-right: 9rem;
 }
-@media (min-width: 1400px) {
-  #kevin .container .content {
-    width: 50%;
-    padding-right: 9rem;
-  }
+#reviews .container .content .reviews-text h6 {
+  font-size: 1rem;
+  font-weight: 600;
 }
-#kevin .container .content .kevin-text h5 {
+#reviews .container .content .reviews-text h5 {
+  font-size: 1.2rem;
   font-weight: 400;
   font-style: oblique;
   margin-top: 1rem;
   opacity: 0.7;
+  width: 120%;
+  color: var(--color-primary-light);
 }
-#kevin .container .content .kevin-text .star-rating {
+#reviews .container .content .reviews-text .star-rating {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-#kevin .container .content .kevin-text p {
+#reviews .container .content .reviews-text p {
   padding: 0;
 }
-#kevin .container .content .kevin-text .swedbank {
-  margin-top: 0;
+#reviews .container .content .reviews-text .swedbank {
+  margin-top: 0.5rem;
   opacity: 1;
+  font-weight: 500;
 }
-#kevin .container .kevin-image {
-  display: none;
+#reviews .container .reviews-image {
+  position: absolute;
+  top: 0;
+  left: 810px;
 }
-@media (min-width: 1400px) {
-  #kevin .container .kevin-image {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 660px;
-  }
-  #kevin .container .kevin-image img {
-    height: 500px;
-  }
+#reviews .container .reviews-image img {
+  height: 500px;
 }
 
 #our-experts .container .headline {
@@ -1943,149 +1904,58 @@ h6 {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 #our-experts .container .headline h2 {
   max-width: 550px;
 }
-#our-experts .container .content-expert {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  margin-top: 1rem;
-  gap: 2rem;
-}
-#our-experts .container .content-expert .image {
-  width: 100%;
-  height: auto;
-}
-#our-experts .container .content-expert .image img {
-  width: 100%;
-  height: auto;
-}
-#our-experts .container .content-expert h4 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-#our-experts .container .content-expert p {
-  margin-top: 0rem;
-  opacity: 0.7;
-}
-@media (min-width: 768px) {
-  #our-experts .container .content-expert {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1400px) {
-  #our-experts .container .content-expert {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+#our-experts .container .content-expert,
 #our-experts .container .content-more-expert {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  margin-top: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1rem;
   gap: 2rem;
 }
-#our-experts .container .content-more-expert .image {
+#our-experts .container .content-expert .our-expert,
+#our-experts .container .content-more-expert .our-expert {
+  border: 1px solid var(--color-border-gray);
+  transition: border-color 0.3s ease;
+}
+#our-experts .container .content-expert .our-expert .image,
+#our-experts .container .content-more-expert .our-expert .image {
   width: 100%;
   height: auto;
+  position: relative;
+  overflow: hidden;
 }
-#our-experts .container .content-more-expert .image img {
+#our-experts .container .content-expert .our-expert .image img,
+#our-experts .container .content-more-expert .our-expert .image img {
   width: 100%;
   height: auto;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
-#our-experts .container .content-more-expert h5 {
+#our-experts .container .content-expert .our-expert .image:hover img,
+#our-experts .container .content-more-expert .our-expert .image:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+#our-experts .container .content-expert .our-expert h4, #our-experts .container .content-expert .our-expert h5,
+#our-experts .container .content-more-expert .our-expert h4,
+#our-experts .container .content-more-expert .our-expert h5 {
+  padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 0;
 }
-#our-experts .container .content-more-expert p {
+#our-experts .container .content-expert .our-expert p,
+#our-experts .container .content-more-expert .our-expert p {
+  padding: 1rem;
   margin-top: 0rem;
   opacity: 0.7;
 }
-@media (min-width: 768px) {
-  #our-experts .container .content-more-expert {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1400px) {
-  #our-experts .container .content-more-expert {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-#next-project .container {
-  position: relative;
-}
-@media (min-width: 1400px) {
-  #next-project .container {
-    padding-top: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    gap: 10rem;
-  }
-}
-#next-project .container .images {
-  display: none;
-  flex: 1;
-}
-@media (min-width: 1400px) {
-  #next-project .container .images {
-    display: block;
-  }
-}
-#next-project .container .images .image-human {
-  position: absolute;
-  bottom: 0;
-  left: 100px;
-  z-index: 3;
-  width: 400px;
-  height: auto;
-}
-#next-project .container .images .image-human img {
-  width: 100%;
-  height: auto;
-}
-#next-project .container .images .image-background {
-  position: absolute;
-  bottom: 0;
-  left: 100px;
-  z-index: 2;
-  width: 500px;
-  height: auto;
-}
-#next-project .container .images .image-background img {
-  width: 100%;
-  height: auto;
-}
-#next-project .container .images .image-dot {
-  position: absolute;
-  bottom: 0;
-  left: 360px;
-  z-index: 1;
-  width: 180px;
-  height: auto;
-}
-#next-project .container .images .image-dot img {
-  width: 100%;
-  height: auto;
-}
-#next-project .container .text {
-  flex: 1;
-}
-@media (min-width: 1400px) {
-  #next-project .container .text h2 {
-    margin-right: 11rem;
-  }
-}
-#next-project .container .text h5 i {
-  color: var(--color-secondary);
-  padding-right: 0.5rem;
-}
-#next-project .container .text p {
-  margin-top: 1rem;
-  margin-left: 1.8rem;
+#our-experts .container .content-more-expert {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3rem;
+  gap: 2rem;
 }
 
 #map {
@@ -2179,4 +2049,71 @@ h6 {
 }
 #solution-item .container .content .main-content p {
   line-height: 2;
+}
+
+#next-project {
+  margin-top: 5rem;
+}
+#next-project .container {
+  position: relative;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  gap: 10rem;
+}
+#next-project .container .images {
+  display: block;
+  flex: 1;
+}
+#next-project .container .images .image-human {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  z-index: 3;
+  width: 400px;
+  height: auto;
+}
+#next-project .container .images .image-human img {
+  width: 100%;
+  height: auto;
+}
+#next-project .container .images .image-background {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  z-index: 2;
+  width: 500px;
+  height: auto;
+}
+#next-project .container .images .image-background img {
+  width: 100%;
+  height: auto;
+}
+#next-project .container .images .image-dot {
+  position: absolute;
+  bottom: 0;
+  left: 360px;
+  z-index: 1;
+  width: 180px;
+  height: auto;
+}
+#next-project .container .images .image-dot img {
+  width: 100%;
+  height: auto;
+}
+#next-project .container .text {
+  flex: 1;
+}
+#next-project .container .text h2 {
+  margin-right: 11rem;
+}
+#next-project .container .text h5 i {
+  color: var(--color-secondary);
+  padding-right: 0.5rem;
+}
+#next-project .container .text p {
+  margin-top: 1rem;
+  margin-left: 1.8rem;
 }

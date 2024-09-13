@@ -5,18 +5,23 @@
 @{
 	Layout = "mainLayout.cshtml";
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
-    var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
-    var tinaImage = Model?.Value<IPublishedContent>("tinaImage")?.Url() ?? "";
-    var kevinImage = Model?.Value<IPublishedContent>("kevinImage")?.Url() ?? "";
-    var ourExpertsExpert1Image = Model?.Value<IPublishedContent>("ourExpertsExpert1Image")?.Url() ?? "";
-    var ourExpertsExpert2Image = Model?.Value<IPublishedContent>("ourExpertsExpert2Image")?.Url() ?? "";
-    var ourExpertsExpert3Image = Model?.Value<IPublishedContent>("ourExpertsExpert3Image")?.Url() ?? "";
+
     var ourExpertsMoreExpert1Image = Model?.Value<IPublishedContent>("ourExpertsMoreExpert1Image")?.Url() ?? "";
     var ourExpertsMoreExpert2Image = Model?.Value<IPublishedContent>("ourExpertsMoreExpert2Image")?.Url() ?? "";
     var ourExpertsMoreExpert3Image = Model?.Value<IPublishedContent>("ourExpertsMoreExpert3Image")?.Url() ?? "";
     var ourExpertsMoreExpert4Image = Model?.Value<IPublishedContent>("ourExpertsMoreExpert4Image")?.Url() ?? "";
+    var ourExpertsExpert1Image     = Model?.Value<IPublishedContent>("ourExpertsExpert1Image")?.Url() ?? "";
+    var ourExpertsExpert2Image     = Model?.Value<IPublishedContent>("ourExpertsExpert2Image")?.Url() ?? "";
+    var ourExpertsExpert3Image     = Model?.Value<IPublishedContent>("ourExpertsExpert3Image")?.Url() ?? "";
+    var aboutBackgroundImage       = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
+    var reviewsImage               = Model?.Value<IPublishedContent>("reviewsImage")?.Url() ?? "";
+    var ceoImage                   = Model?.Value<IPublishedContent>("ceoImage")?.Url() ?? "";
 }
 
+
+
+
+@*---------banner-----------*@
 <section id="about" class="banner bg-gray">
     <div class="background"> 
         <img src="@aboutBackgroundImage" alt="Backround image">
@@ -31,29 +36,33 @@
     </div>
 </section>
 
-<section id="tina">
+
+@*---------CEO-----------*@
+<section id="ceo">
     <div class="container">
-        <div class="tina-image">
+        <div class="ceo-image">
             <div class="image">
-                <img src="@tinaImage" alt="Image of @Model?.Value("tinaHeadline")">
+                <img src="@ceoImage" alt="Image of @Model?.Value("ceoHeadline")">
             </div>
-            <h5>@Model?.Value("tinaHeadline")</h5>
+            <h5>@Model?.Value("ceoHeadline")</h5>
         </div>
 
-        <div class="tina-text">
-            <h4>“@Model?.Value("tinaQuote")”</h4>
-            <h6>@Model?.Value("tinaText")</h6>
+        <div class="ceo-text">
+            <h4>“@Model?.Value("ceoQuote")”</h4>
+            <h6>@Model?.Value("ceoText")</h6>
         </div>
     </div>
 </section>
 
-<section id="kevin" class="bg-gray">
+
+@*--------REVIEWS---------*@
+<section id="reviews" class="bg-gray">
     <div class="container">
         <div class="content">
-            <div class="kevin-text">
-                <h6>@Model?.Value("kevinHeadline")</h6>
-                <h2>@Model?.Value("kevinHeading")</h2>
-                <h5>@Model?.Value("kevinText")</h5>
+            <div class="reviews-text">
+                <h6>@Model?.Value("reviewsHeadline")</h6>
+                <h2>@Model?.Value("reviewsHeading")</h2>
+                <h5>@Model?.Value("reviewsText")</h5>
                 <div class="star-rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -61,17 +70,18 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p>@Model?.Value("kevinName")</p>
-                <h5 class="swedbank">@Model?.Value("kevinBank")</h5>
-            </div>  
+                <p>@Model?.Value("reviewsName")</p>
+                <h5 class="swedbank">@Model?.Value("reviewsBank")</h5>
+            </div>
         </div>
-        <div class="kevin-image">
-            <img src="@kevinImage" alt="Image of @Model?.Value("kevinName")">
+        <div class="reviews-image">
+            <img src="@reviewsImage" alt="Image of @Model?.Value("reviewsName")">
         </div>
-        <div></div>
     </div>
 </section>
 
+
+@*--------CEO-----------*@
 <section id="our-experts">
     <div class="container">
         <div class="headline">
@@ -150,41 +160,5 @@
 
 
 
-@*----------next-project-----------*@
+@*----------next-project/Partial-----------*@
 @await Html.PartialAsync("partials/static/next-project.cshtml")
-
-
-
-
-@* <section id="next-project" class="bg-gray">
-    <div class="container">
-
-        <div class="images">
-            <div class="image-human">
-                <img src="@nextProjectImageHuman" alt="">
-            </div>
-
-            <div class="image-background">
-                <img src="@nextProjectImageBackground" alt="">
-            </div>
-
-            <div class="image-dot">
-                <img src="@nextProjectImageDot" alt="">
-            </div>
-        </div>
-
-        <div class="text">
-            <h2>@Model?.Value("nextProjectTextHeadline")</h2>
-
-            <h5><i class="fas fa-map-marker-alt"></i>@Model?.Value("nextProjectTextLocation")</h5>
-            <p>@officeLocation</p>
-            
-            <h5><i class="fas fa-phone"></i>@Model?.Value("nextProjectTextPhone")</h5>
-            <p>@officePhoneNumber</p>
-            
-            <h5><i class="fas fa-envelope"></i>@Model?.Value("nextProjectTextEmail")</h5>
-            <p>@officeEmailAddress</p>
-        </div>
-    </div>
-</section> *@
-
