@@ -1903,6 +1903,156 @@ h6 {
   display: block;
 }
 
+#risk-management .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#risk-management .container .content {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 3rem;
+}
+#risk-management .container .content .about-us {
+  flex: 1;
+}
+#risk-management .container .content .about-us .image img {
+  width: 100%;
+  height: auto;
+}
+#risk-management .container .content .about-us p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+#risk-management .container .content .about-us .bg-primary {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+#risk-management .container .content .about-us .bg-primary h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+#risk-management .container .content .about-us .bg-primary .image {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+#risk-management .container .content .about-us .bg-primary .rm-input-email {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+#risk-management .container .content .about-us .bg-primary .rm-input-email input {
+  width: 100%;
+  padding: 0.85rem;
+  padding-right: 3rem;
+  border: 1.5px solid var(--color-border-gray);
+  border-radius: 6px;
+  font-size: 12pt;
+  font-style: italic;
+  transition: border-color 0.3s ease;
+}
+#risk-management .container .content .about-us .bg-primary .rm-input-email input::placeholder {
+  color: var(--color-border-gray);
+}
+#risk-management .container .content .about-us .bg-primary .rm-input-email input:focus, #risk-management .container .content .about-us .bg-primary .rm-input-email input:hover {
+  border-color: var(--color-border-dark);
+}
+#risk-management .container .content .about-us .bg-primary .rm-input-email .icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-border-gray);
+  font-size: 1.2rem;
+}
+#risk-management .container .content .main-content {
+  flex: 2;
+  border-left: 1px solid var(--color-gray);
+  padding-left: 3rem;
+}
+#risk-management .container .content .main-content .image img {
+  width: 100%;
+  height: auto;
+}
+#risk-management .container .content .main-content h4 {
+  margin-top: 2rem;
+}
+#risk-management .container .content .main-content ul li {
+  line-height: 2;
+}
+#risk-management .container .content .main-content p {
+  line-height: 2;
+}
+#risk-management .rm-input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 65%;
+}
+#risk-management .rm-input-group h4 {
+  grid-column: 1/-1;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+#risk-management .rm-input-group input,
+#risk-management .rm-input-group textarea {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1.5px solid var(--color-border-gray);
+  border-radius: 4px;
+  font-size: 12pt;
+  font-style: italic;
+  transition: border-color 0.3s ease;
+}
+#risk-management .rm-input-group input::placeholder,
+#risk-management .rm-input-group textarea::placeholder {
+  color: var(--color-border-gray);
+}
+#risk-management .rm-input-group input:focus, #risk-management .rm-input-group input:hover,
+#risk-management .rm-input-group textarea:focus,
+#risk-management .rm-input-group textarea:hover {
+  border-color: var(--color-border-dark);
+}
+#risk-management .rm-input-group textarea {
+  grid-column: 1/-1;
+  height: 150px;
+  resize: none;
+}
+#risk-management .rm-input-group input[type=email] {
+  grid-column: 2;
+}
+#risk-management .rm-input-group input[type=text]:nth-child(3) {
+  grid-column: 1/-1;
+}
+#risk-management .button-question {
+  margin: 1.2rem 22.5rem;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14pt;
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#risk-management .button-question:hover {
+  background-color: var(--color-primary-dark);
+}
+
 #header .background-primary {
   background-color: var(--color-primary);
 }
@@ -1984,69 +2134,6 @@ h6 {
 #footer .container .left {
   margin-left: 0.5rem;
   color: var(--color-light);
-}
-
-#solution-item .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-#solution-item .container .content {
-  margin-top: 5rem;
-}
-@media (min-width: 1400px) {
-  #solution-item .container .content {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 3rem;
-  }
-}
-#solution-item .container .content .about-us {
-  flex: 1;
-}
-#solution-item .container .content .about-us .image img {
-  width: 100%;
-  height: auto;
-}
-#solution-item .container .content .about-us p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-#solution-item .container .content .about-us .bg-primary {
-  position: relative;
-  z-index: 1;
-  padding: 2rem;
-}
-#solution-item .container .content .about-us .bg-primary h4 {
-  color: var(--color-secondary);
-}
-#solution-item .container .content .about-us .bg-primary .image {
-  width: 50%;
-  height: auto;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-}
-#solution-item .container .content .main-content {
-  flex: 2;
-  border-left: 1px solid var(--color-gray);
-  padding-left: 3rem;
-}
-#solution-item .container .content .main-content .image img {
-  width: 100%;
-  height: auto;
-}
-#solution-item .container .content .main-content h4 {
-  margin-top: 2rem;
-}
-#solution-item .container .content .main-content ul li {
-  line-height: 2;
-}
-#solution-item .container .content .main-content p {
-  line-height: 2;
 }
 
 #next-project {
