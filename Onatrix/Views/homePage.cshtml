@@ -4,20 +4,20 @@
     Layout = "mainLayout.cshtml";
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
 
-    var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
-    var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
-
-    var weAreImage1 = Model?.Value<IPublishedContent>("weAreImage1")?.Url() ?? "";
-    var weAreImage2 = Model?.Value<IPublishedContent>("weAreImage2")?.Url() ?? "";
-    var successImage1 = Model?.Value<IPublishedContent>("successImage1")?.Url() ?? "";
-    var successImage2 = Model?.Value<IPublishedContent>("successImage2")?.Url() ?? "";
     var projectsProject1Image = Model?.Value<IPublishedContent>("projectsProject1Image")?.Url() ?? "";
     var projectsProject2Image = Model?.Value<IPublishedContent>("projectsProject2Image")?.Url() ?? "";
     var projectsProject3Image = Model?.Value<IPublishedContent>("projectsProject3Image")?.Url() ?? "";
     var projectsProject4Image = Model?.Value<IPublishedContent>("projectsProject4Image")?.Url() ?? "";
+    var successImage1         = Model?.Value<IPublishedContent>("successImage1")?.Url() ?? "";
+    var successImage2         = Model?.Value<IPublishedContent>("successImage2")?.Url() ?? "";
+    var weAreImage1           = Model?.Value<IPublishedContent>("weAreImage1")?.Url() ?? "";
+    var weAreImage2           = Model?.Value<IPublishedContent>("weAreImage2")?.Url() ?? "";
+    var backgroundImage       = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
+    var signatureImage        = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
 
 }
 
+<!----------Hero---------->
 <section id="hero-slider" class="hero">
     <div class="background" style="background-image:url(@backgroundImage);background-size: cover; background-position: 60%">
         <div class="container">
@@ -33,6 +33,7 @@
     </div>
 </section>
 
+<!----------about-us---------->
 <section id="about-us" class="about-us">
     <div class="container">
         <div class="content">
@@ -84,7 +85,7 @@
 </section>
 
 
-@*----------our-services-----------*@
+@*----------our-services/Partial-----------*@
 @await Html.PartialAsync("partials/static/our-services.cshtml")
 
 
@@ -141,7 +142,7 @@
 </section>
 
 
-@*----------our-services-----------*@
+@*----------our-projects-----------*@
 <section id="our-projects" class="our-projects">
     <div class="container">
         <h6>@Model?.Value("projectsHeadline")</h6>
@@ -196,7 +197,7 @@
 </section>
 
 
-@*----------partners-----------*@
+@*----------partners/Partial-----------*@
 @await Html.PartialAsync("partials/static/partners.cshtml")
 
 

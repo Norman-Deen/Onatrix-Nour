@@ -1,4 +1,4 @@
-﻿// mixins neads to be att top
+﻿// put  mixins alwayes att top
 
 
 @import "./mixins/mixins-media.scss";
@@ -22,6 +22,8 @@
 @import "./colors/headings";
 @import "./colors/backgrounds";
 
+
+@import "./pages/pages.scss";
 @import "./sections/sections.scss";
 
 

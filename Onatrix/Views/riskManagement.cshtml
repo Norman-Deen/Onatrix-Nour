@@ -3,23 +3,16 @@
 @{
 	Layout = "mainLayout.cshtml";
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
-    var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
-    var rightSectionImage01        = Model?.Value<IPublishedContent>("rightSectionImage01")?.Url() ?? "";
+    var aboutBackgroundImage  = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
+    var rightSectionImage01   = Model?.Value<IPublishedContent>("rightSectionImage01")?.Url() ?? "";
     var rightSectionImage02   = Model?.Value<IPublishedContent>("rightSectionImage02")?.Url() ?? "";
-    var leftSectionImage01   = Model?.Value<IPublishedContent>("leftSectionImage01")?.Url() ?? "";
-    var leftSectionImage02   = Model?.Value<IPublishedContent>("leftSectionImage02")?.Url() ?? "";
-   
-
-   
+    var leftSectionImage01    = Model?.Value<IPublishedContent>("leftSectionImage01")?.Url() ?? "";
+    var leftSectionImage02    = Model?.Value<IPublishedContent>("leftSectionImage02")?.Url() ?? "";
 }
 
 
-@*
 
-@Model?.Value("xxxxxxx")
-
-*@
-
+<!-------banner-------------------->
 <section id="about" class="banner bg-gray">
     <div class="background"> 
         <img src="@aboutBackgroundImage" alt="Backround image">
@@ -37,73 +30,75 @@
 </section>
 
 
-    
-            <section id="solution-item">
-                <div class="container">
-                    <div class="content">
-                        <nav class="about-us">
-                            <h4>@Model?.Value("leftSectionHeadline01")</h4>
-                            <div class="image">
-                                <img src=@leftSectionImage01 alt="leftSectionImage01">
-                            </div>
-                            <p>@Model?.Value("leftSectionText01")</p>
-                            <div class="bg-primary">
-                                <h4>@Model?.Value("leftSectionHeadline02")</h4>
-                                <p>@Model?.Value("leftSectionText02")</p>
-                                <div class="form">E-mail <i class="fa-light fa-envelope"></i></div>
-                                <div class="image">
-                                    <img src=@leftSectionImage02 alt="">
-                                </div>
-                            </div>
-                        </nav>
-            
-                        <div class="main-content">
-                            <div class="image">
-                                <img src=@rightSectionImage01 alt="rightSectionImage01">
-                            </div>
-                            <h4>@Model?.Value("rightSectionHeadline01")</h4>
-                            <div class="list">
-                                <ul>
-                                    <li>@Model?.Value("rightSectionList0101")</li>
-                                    <li>@Model?.Value("rightSectionList0102")</li>
-                                    <li>@Model?.Value("rightSectionList0103")</li>
-                                </ul>
-                            </div>
-                            <h4>@Model?.Value("rightSectionHeadline02")</h4>
-                            <p>@Model?.Value("rightSectionText02")</p>
-                            <div class="list">
-                                <ul>
-                                    <li>@Model?.Value("rightSectionList0201")</li>
-                                    <li>@Model?.Value("rightSectionList0202")</li>
-                                    <li>@Model?.Value("rightSectionList0203")</li>
-                                </ul>
-                            </div>
-                            <p> @Model?.Value("rightSectionText03")</p>
 
-                            <div class="image">
-                                <img src=@rightSectionImage02 alt="rightSectionImage02">
-                            </div>
-                            <h4>@Model?.Value("rightSectionHeadline03")</h4>
-                            <p>@Model?.Value("rightSectionText04")</p>
-                            <div class="list">
-                              <ul>
-                                <li>@Model.Value("rightSectionList0301")</li>
-                                <li>@Model.Value("rightSectionList0302")</li>
-                                <li>@Model.Value("rightSectionList0303")</li>
-                                <li>@Model.Value("rightSectionList0304")</li>
-                            </ul>
 
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="form">
-                        <h4>@Model?.Value("rightSectionHeadline04")</h4>
-                        <a href="" class="btn btn-primary">Submit</a>
+<!-------solution-------------------->
+<section id="solution-item">
+    <div class="container">
+        <div class="content">
+            <nav class="about-us">
+                <h4>@Model?.Value("leftSectionHeadline01")</h4>
+                <div class="image">
+                    <img src=@leftSectionImage01 alt="leftSectionImage01">
+                </div>
+                <p>@Model?.Value("leftSectionText01")</p>
+                <div class="bg-primary">
+                    <h4>@Model?.Value("leftSectionHeadline02")</h4>
+                    <p>@Model?.Value("leftSectionText02")</p>
+                    <div class="form">E-mail <i class="fa-light fa-envelope"></i></div>
+                    <div class="image">
+                        <img src=@leftSectionImage02 alt="">
                     </div>
                 </div>
+            </nav>
+            
+            <div class="main-content">
+                <div class="image">
+                    <img src=@rightSectionImage01 alt="rightSectionImage01">
+                </div>
+                <h4>@Model?.Value("rightSectionHeadline01")</h4>
+                <div class="list">
+                    <ul>
+                        <li>@Model?.Value("rightSectionList0101")</li>
+                        <li>@Model?.Value("rightSectionList0102")</li>
+                        <li>@Model?.Value("rightSectionList0103")</li>
+                    </ul>
+                </div>
+                <h4>@Model?.Value("rightSectionHeadline02")</h4>
+                <p>@Model?.Value("rightSectionText02")</p>
+                <div class="list">
+                    <ul>
+                        <li>@Model?.Value("rightSectionList0201")</li>
+                        <li>@Model?.Value("rightSectionList0202")</li>
+                        <li>@Model?.Value("rightSectionList0203")</li>
+                    </ul>
+                </div>
+                <p> @Model?.Value("rightSectionText03")</p>
+
+                <div class="image">
+                    <img src=@rightSectionImage02 alt="rightSectionImage02">
+                </div>
+                <h4>@Model?.Value("rightSectionHeadline03")</h4>
+                <p>@Model?.Value("rightSectionText04")</p>
+                <div class="list">
+                    <ul>
+                    <li>@Model?.Value("rightSectionList0301")</li>
+                    <li>@Model?.Value("rightSectionList0302")</li>
+                    <li>@Model?.Value("rightSectionList0303")</li>
+                    <li>@Model?.Value("rightSectionList0304")</li>
+                </ul>
+
+                </div> 
+            </div>
+        </div>
+        <div class="form">
+            <h4>@Model?.Value("rightSectionHeadline04")</h4>
+            <a href="" class="btn btn-primary">Submit</a>
+        </div>
+    </div>
             
 
-            </section>
+</section>
             
 
 

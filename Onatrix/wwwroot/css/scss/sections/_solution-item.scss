@@ -4,14 +4,19 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+
+
         .content {
             margin-top: 5rem;
+
             
             @include desktop {
                 display: flex;
                 justify-content: center;
                 align-items: start;
                 gap: 3rem;
+
             }
 
             .about-us {
