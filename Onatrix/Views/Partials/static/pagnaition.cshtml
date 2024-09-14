@@ -1,0 +1,16 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+
+
+@{
+    var rootContents       = UmbracoHelper.ContentAtRoot();
+}
+
+
+<div class="pagnaition">
+    <a href="#" class="prev">Prev</a>
+    <a href="#" class="one">1</a>
+    <a href="#" class="two">2</a>
+    <a href="#" class="next">Next</a>
+</div>

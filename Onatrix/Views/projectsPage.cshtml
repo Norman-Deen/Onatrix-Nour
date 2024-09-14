@@ -4,6 +4,15 @@
 	Layout = "mainLayout.cshtml"; 
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
     var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
+
+ var lOurProjectsImage01 = Model?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
+var lOurProjectsImage02 = Model?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
+var lOurProjectsImage03 = Model?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
+var lOurProjectsImage04 = Model?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
+
+
+
+        
 }
 
 
@@ -28,5 +37,132 @@
 
 
 
-@*----------next-project-----------*@
+
+
+@*----------XXXXXXX-----------*@
+<section id="main-content-section" class="page-section container">
+    <div class="side-content">
+        <div class="project">
+            <div class="project-img">
+                <img src="@lOurProjectsImage01"></img>
+            </div>
+            <div class="project-text">
+                <div class="project-header">
+                    <h4>@Model?.Value("lOurProjectsHeadline01")</h4>      
+                    <div class="date-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>@Model?.Value("lOurProjectsDate01")</span>
+                    </div>
+                </div>
+                
+                <p>@Model?.Value("lOurProjectsTextP01")</p>
+                <a href="#">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right" style="color: beige;"></i>
+                </a>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-img">
+                <img src="@lOurProjectsImage02"></img>
+            </div>
+
+            <div class="project-text">
+                <div class="project-header">
+                    <h4>@Model?.Value("lOurProjectsHeadline02")</h4>
+                    <div class="date-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>@Model?.Value("lOurProjectsDate02")</span>
+                    </div>
+                </div>
+                 <p>@Model?.Value("lOurProjectsTextP02")</p>
+
+                <a href="#">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right" style="color: beige;"></i>
+                </a>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-img">
+                <img src="@lOurProjectsImage03"></img>
+            </div>
+            <div class="project-text">
+                <div class="project-header">
+                    <h4>Financial Advisors for Irra Industrial Group</h4>
+                    <div class="date-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>June 15, 2024</span>
+                    </div>
+                </div>
+                
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error.</p>
+                <a href="#">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right" style="color: beige;"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-img">
+                <img src="@lOurProjectsImage04"></img>
+            </div>
+            <div class="project-text">
+                <div class="project-header">
+                    <h4>@Model?.Value("lOurProjectsHeadline04")</h4>
+                    <div class="date-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>@Model?.Value("lOurProjectsDate04")</span>
+                    </div>
+                </div>
+                 <p>@Model?.Value("lOurProjectsTextP04")</p>
+                <a href="#">
+                    <span>Read more</span>
+                    <i class="fas fa-arrow-right" style="color: beige;"></i>
+                </a>
+            </div>
+        </div>
+
+        
+    </div>
+    
+    <div class="side-bar">
+        <h4>@Model.Value("tagHeadLine")</h4>
+    <div class="tags">
+    <div class="tag"><span>@Model?.Value("tag01")</span></div>
+    <div class="tag"><span>@Model?.Value("tag02")</span></div>
+    <div class="tag"><span>@Model?.Value("tag03")</span></div>
+    <div class="tag"><span>@Model?.Value("tag04")</span></div>
+    <div class="tag"><span>@Model?.Value("tag05")</span></div>
+    <div class="tag"><span>@Model?.Value("tag06")</span></div>
+    <div class="tag"><span>@Model?.Value("tag07")</span></div>
+    <div class="tag"><span>@Model?.Value("tag08")</span></div>
+    </div>
+
+        <form class="contact-box">
+            <h4>How can we help you?</h4>
+            <p>Online support 24/7, we are here to help you</p>
+            <div class="input-container">
+                <input type="email" placeholder="E-mail address"></input>
+                <img src="C:/Nour/Education/Test/Umbraco/Git-Hub/levistark/Onatrix-main/images/Icon-mail.png"></img>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+@*----------pagnaitior/Partial-----------*@
+@await Html.PartialAsync("partials/static/pagnaition.cshtml")
+
+@*----------next-project/Partial-----------*@
 @await Html.PartialAsync("partials/static/next-project.cshtml")

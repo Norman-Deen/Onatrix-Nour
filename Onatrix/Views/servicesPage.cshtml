@@ -8,8 +8,6 @@
 }
 
 
-
-
 @*----------Nour/Fix Name-----------*@
 <section id="about" class="banner bg-gray">
     <div class="background"> 
@@ -27,16 +25,18 @@
 
 
 
-@*----------our-services-----------*@
+@*----------our-services/Partial-----------*@
 <div class="services-our-services">
     @await Html.PartialAsync("partials/static/our-services.cshtml")
 </div>
 
 
+@*----------pagnaitior/Partial-----------*@
+@await Html.PartialAsync("partials/static/pagnaition.cshtml")
 
 
 
-@*----------next-project-----------*@
+@*----------next-project/Partial-----------*@
 @await Html.PartialAsync("partials/static/next-project.cshtml")
 
 
