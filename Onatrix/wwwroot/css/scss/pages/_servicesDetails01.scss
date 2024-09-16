@@ -1,4 +1,4 @@
-﻿#solution-item {
+﻿#ServicesDetails01 {
     .container {
         display: flex;
         justify-content: center;
@@ -49,7 +49,7 @@
                 }
             }
 
-            .main-content {
+            .ServicesDetails01-main-content {
                 flex: 2;
                 border-left: 1px solid var(--color-gray);
                 padding-left: 3rem;
@@ -80,7 +80,7 @@
 }
 
 // Form
-.rm-input-group {
+.ServicesDetails01-form-question {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
@@ -130,7 +130,7 @@
 }
 
 .button-question {
-    margin: 1.2rem 22.5rem;
+    margin: 1.2rem 23.4rem;
     padding: 0.75rem 2rem;
     text-align: center;
     font-weight: bold;

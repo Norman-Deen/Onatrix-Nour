@@ -6,24 +6,24 @@
     var rootContents = UmbracoHelper.ContentAtRoot();
     var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
 
-    var leftSectionImage02 = Model?.Value<IPublishedContent>("leftSectionImage02")?.Url() ?? "";
-    var leftSectionHeadline02 = settings?.Value<string>("leftSectionHeadline02") ?? "";
-    var leftSectionText02 = settings?.Value<string>("leftSectionText02") ?? "";
+    var weHelpYouImage = Model?.Value<IPublishedContent>("weHelpYouImage")?.Url() ?? "";
+    var weHelpYouHeadline = settings?.Value<string>("weHelpYouHeadline") ?? "";
+    var weHelpYouText = settings?.Value<string>("weHelpYouText") ?? "";
 }
 
 
 
 <!------- How can we help you? -------------------->
 <div class="bg-primary">
-    <h4>@leftSectionHeadline02</h4>
-    <p>@leftSectionText02</p>
-    <div class="rm-input-email">
+    <h4>@weHelpYouHeadline</h4>
+    <p>@weHelpYouText</p>
+    <div class="we-help-you">
         <input type="email" placeholder="E-mail address">
-        <span class="icon">
+        <span class="we-help-icon">
             <i class="fas fa-envelope"></i> 
         </span>
     </div>
-    <div class="image">
+    <div class="we-help-you-image">
         <img src="~/media/csafyptp/mail.svg" alt="Section Image">
     </div>
 </div>

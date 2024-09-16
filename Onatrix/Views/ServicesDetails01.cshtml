@@ -3,6 +3,7 @@
 @{
     Layout = "mainLayout.cshtml";
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
     var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
     var aboutUsImage = Model?.Value<IPublishedContent>("aboutUsImage")?.Url() ?? "";
     var mainContentImage1 = Model?.Value<IPublishedContent>("mainContentImage1")?.Url() ?? "";   
@@ -18,15 +19,18 @@
             <div class="links">
                 <a class="home" href="@Model?.Value("aboutLink1")">@Model?.Value("aboutLinkText1")</a>
                 <div class="chevron"><i class="fa-regular fa-chevron-right"></i></div>
-                <a class="home" href="@Model?.Value("aboutLink3")">@Model?.Value("aboutLinkText2")</a>
+                <a class="home" href="@Model?.Value("aboutLink2")">@Model?.Value("aboutLinkText2")</a>
                 <div class="chevron"><i class="fa-regular fa-chevron-right"></i></div>
-                <a class="activ" href="@Model?.Value("aboutLink2")">@Model?.Value("aboutLinkText3")</a>
+                <a class="activ" href="#">@Model?.Value("aboutHeadline")</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="solution-item">
+
+
+<!-------Right Section-------------------->
+<section id="ServicesDetails01">
     <div class="container">
         <div class="content">
 
@@ -39,20 +43,21 @@
 
                 <!-------How can we help you?-------------------->
                 @await Html.PartialAsync("partials/static/we-help-you.cshtml")
+
             </nav>
 
-            <div class="main-content">
+            <div class="ServicesDetails01-main-content">
                 <div class="image">
                     <img src="@mainContentImage1" alt="Image of @Model?.Value("servicesBannerHeadline")">
                 </div>
 
-                @Model.Value("mainContentText1")
+                @Model?.Value("mainContentText1")
 
                 <div class="image">
                     <img src="@mainContentImage2" alt="Image of @Model?.Value("servicesBannerHeadline")">
                 </div>
                 
-                @Model.Value("mainContentText2")
+                @Model?.Value("mainContentText2")
             </div>  
         </div>  
     </div>
@@ -62,7 +67,7 @@
 
 <!-------form-------------------->
 <form>
-    <div class="rm-input-group">
+    <div class="ServicesDetails01-form-question">
         <h4>Have a question?</h4>
         <input type="text" placeholder="Name">
         <input type="email" placeholder="Email">
