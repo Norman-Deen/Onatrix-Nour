@@ -42,24 +42,15 @@
                     <img src=@leftSectionImage01 alt="leftSectionImage01">
                 </div>
                 <p>@Model?.Value("leftSectionText01")</p>
-                <div class="bg-primary">
-                    <h4>@Model?.Value("leftSectionHeadline02")</h4>
-                    <p>@Model?.Value("leftSectionText02")</p>
 
-                    <div class="rm-input-email">
-                        <input type="email" placeholder="E-mail address">
-                        <span class="icon">
-                            <i class="fas fa-envelope"></i> 
-                        </span>
-                    </div>
-                    <div class="image">
-                        <img src=@leftSectionImage02 alt="">
-                    </div>
-                </div>
-
-
-            </nav>
+            <!-------How can we help you?-------------------->
+            @await Html.PartialAsync("partials/static/we-help-you.cshtml")
             
+        </nav>
+            
+
+
+
             <div class="main-content">
                 <div class="image">
                     <img src=@rightSectionImage01 alt="rightSectionImage01">
@@ -100,6 +91,8 @@
             </div>
         </div>
     </div>
+
+
 
     <!-------form-------------------->
     <form>

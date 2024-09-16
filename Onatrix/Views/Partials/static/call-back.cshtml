@@ -1,0 +1,57 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@{
+    // جلب محتوى الجذر
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage");
+
+    // جلب القيم من إعدادات الصفحة
+    var callBackHeadline = settings?.Value<string>("callBackHeadline") ?? "Default Headline";
+    var callBackP = settings?.Value<string>("callBackP") ?? "Default description text.";
+    var callBackPlaceholder01 = settings?.Value<string>("callBackPlaceholder01") ?? "Name";
+    var callBackPlaceholder02 = settings?.Value<string>("callBackPlaceholder02") ?? "Email address";
+    var callBackPlaceholder03 = settings?.Value<string>("callBackPlaceholder03") ?? "Phone";
+    var callBackPlaceholder04 = settings?.Value<string>("callBackPlaceholder04") ?? "Select an option";
+
+    var callBackType01 = settings?.Value<string>("callBackType01") ?? "text"; // تأكد من أن نوع الإدخال صالح
+    var callBackType02 = settings?.Value<string>("callBackType02") ?? "email";
+    var callBackType03 = settings?.Value<string>("callBackType03") ?? "number";
+
+    var callBackButton = settings?.Value<string>("callBackButton") ?? "Submit"; // تأكد من اسم الزر
+    var callBackButtonType = settings?.Value<string>("callBackButtonType") ?? "Submit"; // تأكد من اسم الزر
+
+    var callBackOptions = new List<string>
+    {
+        settings?.Value<string>("callBackOptions01") ?? "Option 1",
+        settings?.Value<string>("callBackOptions02") ?? "Option 2",
+        settings?.Value<string>("callBackOptions03") ?? "Option 3"
+    };
+}
+
+<div class="call-box">
+    <div class="box-header">
+        <h3>@callBackHeadline</h3>
+    </div>
+    <form>
+        <p>@callBackP</p>
+        <input type="@callBackType01" placeholder="@callBackPlaceholder01" />
+        <input type="@callBackType02" placeholder="@callBackPlaceholder02" />
+        <input type="@callBackType03" placeholder="@callBackPlaceholder03" />
+        <div class="select-wrapper">
+            <div class="select">
+                <div class="select_trigger">
+                    <span>@callBackPlaceholder04</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="options">
+                    @foreach (var option in callBackOptions)
+                    {
+                        <span class="option" data-value="@option">@option</span>
+                    }
+                </div>
+            </div>
+        </div>
+        <button type="@callBackButtonType" class="btn-accent">@callBackButton</button>
+    </form>
+</div>

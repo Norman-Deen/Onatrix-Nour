@@ -1,0 +1,29 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+
+    var leftSectionImage02 = Model?.Value<IPublishedContent>("leftSectionImage02")?.Url() ?? "";
+    var leftSectionHeadline02 = settings?.Value<string>("leftSectionHeadline02") ?? "";
+    var leftSectionText02 = settings?.Value<string>("leftSectionText02") ?? "";
+}
+
+
+
+<!------- How can we help you? -------------------->
+<div class="bg-primary">
+    <h4>@leftSectionHeadline02</h4>
+    <p>@leftSectionText02</p>
+    <div class="rm-input-email">
+        <input type="email" placeholder="E-mail address">
+        <span class="icon">
+            <i class="fas fa-envelope"></i> 
+        </span>
+    </div>
+    <div class="image">
+        <img src="~/media/csafyptp/mail.svg" alt="Section Image">
+    </div>
+</div>
