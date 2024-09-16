@@ -1903,77 +1903,41 @@ h6 {
   display: block;
 }
 
-#risk-management .container {
+#solution-item .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-#risk-management .container .content {
+#solution-item .container .content {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: start;
   gap: 3rem;
 }
-#risk-management .container .content .about-us {
+#solution-item .container .content .about-us {
   flex: 1;
+  margin-bottom: 2rem;
 }
-#risk-management .container .content .about-us .image img {
+#solution-item .container .content .about-us .image img {
   width: 100%;
   height: auto;
 }
-#risk-management .container .content .about-us p {
-  margin-top: 1rem;
+#solution-item .container .content .about-us p {
   margin-bottom: 1rem;
-  font-size: 1.15rem;
+  margin-top: 1rem;
+  line-height: 1.5;
 }
-#risk-management .container .content .about-us .bg-primary {
+#solution-item .container .content .about-us .bg-primary {
   position: relative;
   z-index: 1;
   padding: 2rem;
-  /*   .rm-input-email {
-         position: relative;
-         width: 100%;
-         max-width: 400px; 
-
-         input {
-             width: 100%;
-             padding: 0.85rem;
-             padding-right: 3rem;   
-             border: 1.5px solid var(--color-border-gray);
-             border-radius: 6px;
-             font-size: 12pt;
-             font-style: italic;
-             transition: border-color 0.3s ease;
-
-             &::placeholder {
-                 color: var(--color-border-gray);
-             }
-
-             &:focus,
-             &:hover {
-                 border-color: var(--color-border-dark);
-             }
-         }
-
-         .icon {
-             position: absolute;
-             top: 50%;
-             right: 1rem;
-             transform: translateY(-50%);
-             pointer-events: none; 
-             color: var(--color-border-gray); 
-             font-size: 1.2rem; 
-         }
-     }*/
 }
-#risk-management .container .content .about-us .bg-primary h4 {
-  font-size: 1.8rem;
-  font-weight: 500;
+#solution-item .container .content .about-us .bg-primary h4 {
   color: var(--color-secondary);
 }
-#risk-management .container .content .about-us .bg-primary .image {
+#solution-item .container .content .about-us .bg-primary .image {
   width: 50%;
   height: auto;
   position: absolute;
@@ -1981,25 +1945,26 @@ h6 {
   right: 0;
   z-index: -1;
 }
-#risk-management .container .content .main-content {
+#solution-item .container .content .main-content {
   flex: 2;
   border-left: 1px solid var(--color-gray);
   padding-left: 3rem;
 }
-#risk-management .container .content .main-content .image img {
+#solution-item .container .content .main-content .image img {
   width: 100%;
   height: auto;
 }
-#risk-management .container .content .main-content h4 {
+#solution-item .container .content .main-content h4 {
   margin-top: 2rem;
 }
-#risk-management .container .content .main-content ul li {
+#solution-item .container .content .main-content ul li {
   line-height: 2;
 }
-#risk-management .container .content .main-content p {
+#solution-item .container .content .main-content p {
   line-height: 2;
 }
-#risk-management .rm-input-group {
+
+.rm-input-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -2007,13 +1972,13 @@ h6 {
   margin: 0 auto;
   max-width: 65%;
 }
-#risk-management .rm-input-group h4 {
+.rm-input-group h4 {
   grid-column: 1/-1;
   font-size: 1.5rem;
   font-weight: 700;
 }
-#risk-management .rm-input-group input,
-#risk-management .rm-input-group textarea {
+.rm-input-group input,
+.rm-input-group textarea {
   width: 100%;
   padding: 0.85rem;
   border: 1.5px solid var(--color-border-gray);
@@ -2022,27 +1987,28 @@ h6 {
   font-style: italic;
   transition: border-color 0.3s ease;
 }
-#risk-management .rm-input-group input::placeholder,
-#risk-management .rm-input-group textarea::placeholder {
+.rm-input-group input::placeholder,
+.rm-input-group textarea::placeholder {
   color: var(--color-border-gray);
 }
-#risk-management .rm-input-group input:focus, #risk-management .rm-input-group input:hover,
-#risk-management .rm-input-group textarea:focus,
-#risk-management .rm-input-group textarea:hover {
+.rm-input-group input:focus, .rm-input-group input:hover,
+.rm-input-group textarea:focus,
+.rm-input-group textarea:hover {
   border-color: var(--color-border-dark);
 }
-#risk-management .rm-input-group textarea {
+.rm-input-group textarea {
   grid-column: 1/-1;
   height: 150px;
   resize: none;
 }
-#risk-management .rm-input-group input[type=email] {
+.rm-input-group input[type=email] {
   grid-column: 2;
 }
-#risk-management .rm-input-group input[type=text]:nth-child(3) {
+.rm-input-group input[type=text]:nth-child(3) {
   grid-column: 1/-1;
 }
-#risk-management .button-question {
+
+.button-question {
   margin: 1.2rem 22.5rem;
   padding: 0.75rem 2rem;
   text-align: center;
@@ -2054,7 +2020,7 @@ h6 {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-#risk-management .button-question:hover {
+.button-question:hover {
   background-color: var(--color-primary-dark);
 }
 
