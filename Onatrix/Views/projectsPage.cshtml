@@ -10,16 +10,9 @@
     var lOurProjectsImage03 = Model?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
     var lOurProjectsImage04 = Model?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
 
-
-     var ProjectsDetailsLink01 = Model?.Value<string>("ProjectsDetailsLink01") ?? "#";
-
-
-
+    var ProjectsDetailsLink01 = Model?.Value<string>("ProjectsDetailsLink01") ?? "#";
         
 }
-
-
-
 
 
 
@@ -119,14 +112,14 @@
     <div class="side-bar">
         <h4>@Model?.Value("tagHeadLine")</h4>
         <div class="tags">
-            <div class="tag"><span>@Model?.Value("tag01")</span></div>
-            <div class="tag"><span>@Model?.Value("tag02")</span></div>
-            <div class="tag"><span>@Model?.Value("tag03")</span></div>
-            <div class="tag"><span>@Model?.Value("tag04")</span></div>
-            <div class="tag"><span>@Model?.Value("tag05")</span></div>
-            <div class="tag"><span>@Model?.Value("tag06")</span></div>
-            <div class="tag"><span>@Model?.Value("tag07")</span></div>
-            <div class="tag"><span>@Model?.Value("tag08")</span></div>
+            <div class="tag"><span class="tag-text">@Model?.Value("tag01")</span></div>
+            <div class="tag"><span class="tag-text">@Model?.Value("tag02")</span></div>
+            <div class="tag"><span class="tag-text">@Model?.Value("tag03")</span></div>
+            <div class="tag"><span class="tag-text">@Model?.Value("tag04")</span></div>
+            <div class="tag"><span class="tag-text">@Model?.Value("tag05")</span></div>
+            <div class="tag"><span class="tag-text">@Model?.Value("tag06")</span></div>
+            <div class="tag"><span class="tag-text">@Model?.Value("tag07")</span></div>
+            <div class="tag"><span class="tag-text">@Model?.Value("tag08")</span></div>
         </div>
 
       
@@ -134,19 +127,12 @@
 
 
 
-          <!-------How can we help you?-------------------->
-            @await Html.PartialAsync("partials/static/we-help-you.cshtml")
+    <!-------How can we help you?-------------------->
+    @await Html.PartialAsync("partials/static/we-help-you.cshtml")
 
 
     </div>
 </section>
-
-
-
-
-
-
-
 
 
 

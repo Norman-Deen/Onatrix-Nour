@@ -21,7 +21,7 @@
             .project-img {
                 overflow: hidden;
                 max-height: 220px;
-                // width: 1400px;
+                width: 100%;
 
                 img {
                     width: 100%;
@@ -51,7 +51,7 @@
                     .date-group {
                         display: flex;
                         align-items: center;
-                        color: darkred; /* تطبيق اللون على جميع العناصر داخل .date-group */
+                       // color: darkred; /* تطبيق اللون على جميع العناصر داخل .date-group */
 
                         i {
                             margin-right: 0.5rem;
