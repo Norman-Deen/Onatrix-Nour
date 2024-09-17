@@ -5,10 +5,13 @@
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
     var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
 
- var lOurProjectsImage01 = Model?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
-var lOurProjectsImage02 = Model?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
-var lOurProjectsImage03 = Model?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
-var lOurProjectsImage04 = Model?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
+    var lOurProjectsImage01 = Model?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
+    var lOurProjectsImage02 = Model?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
+    var lOurProjectsImage03 = Model?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
+    var lOurProjectsImage04 = Model?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
+
+
+     var ProjectsDetailsLink01 = Model?.Value<string>("ProjectsDetailsLink01") ?? "#";
 
 
 
@@ -41,7 +44,9 @@ var lOurProjectsImage04 = Model?.Value<IPublishedContent>("lOurProjectsImage04")
 
 @*----------Left Our Projects-----------*@
 <section id="main-content-section" class="page-section container">
+
     <div class="side-content">
+
         <div class="project">
             <div class="project-img">
                 <img src="@lOurProjectsImage01"><img>
@@ -55,7 +60,7 @@ var lOurProjectsImage04 = Model?.Value<IPublishedContent>("lOurProjectsImage04")
                     </div>
                 </div>
                 <p class="project-P">@Model?.Value("lOurProjectsTextP01")</p>
-                <a href="#" class="ReadMore">Read more <i class="fas fa-arrow-right" style="color: beige;"></i></a>
+                <a href="@Model?.Value("ProjectsDetailsLink01")" class="ReadMore">Read more <i class="fas fa-arrow-right" style="color: beige;"></i></a>
             </div>
         </div>
 
