@@ -1,36 +1,63 @@
-﻿
-.we-help-you {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
+﻿.we-help-you-box {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    border-radius: 4px;
+    position: relative; /* لضبط الصورة بشكل نسبي */
+    max-width: 20rem;
 
-    input {
+    .we-help-you-Headline {
+        color: var(--color-secondary);
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .we-help-you-p {
+        color: var(--color-accent);
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .we-help-you {
+        position: relative;
         width: 100%;
-        padding: 0.85rem;
-        padding-right: 3rem;
-        border: 1.5px solid var(--color-border-gray);
-        border-radius: 6px;
-        font-size: 12pt;
-        font-style: italic;
-        transition: border-color 0.3s ease;
+        max-width: 400px;
 
-        &::placeholder {
-            color: var(--color-border-gray);
+        input {
+            width: 100%;
+            padding: 0.85rem;
+            padding-right: 3rem;
+            border: 1.5px solid var(--color-border-gray);
+            border-radius: 6px;
+            font-size: 12pt;
+            font-style: italic;
+            transition: border-color 0.3s ease;
+
+            &::placeholder {
+                color: var(--color-border-gray);
+            }
+
+            &:focus,
+            &:hover {
+                border-color: var(--color-border-dark);
+            }
         }
 
-        &:focus,
-        &:hover {
-            border-color: var(--color-border-dark);
+        .we-help-icon {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: var(--color-border-gray);
+            font-size: 1.2rem;
         }
     }
 
-    .we-help-icon {
-        position: absolute;
-        top: 50%;
-        right: 1rem;
-        transform: translateY(-50%);
-        pointer-events: none;
-        color: var(--color-border-gray);
-        font-size: 1.2rem;
+    .we-help-you-image {
+        position: absolute; /* لجعل الصورة تتحرك داخل الحاوية */
+        bottom: 0;
+        right: 0;
+        width: 46%;
+       // opacity: 0.1; /* لجعل الصورة شفافة قليلاً كما هو في المثال السابق */
     }
 }

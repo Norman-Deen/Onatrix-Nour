@@ -2181,55 +2181,10 @@ h6 {
   z-index: 2;
 }
 
-main .atf {
-  position: relative;
-  padding: 6rem 0;
-  background-color: var(--color-accent);
-}
-main .atf .earth-down {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-main .atf .earth-up {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-main .atf .atf-content {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-main .atf .atf-content nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-main .atf .atf-content nav a {
-  color: var(--color-default);
-  text-decoration: none;
-}
-main .atf .atf-content nav a:hover {
-  text-decoration: underline;
-}
-main .atf .atf-content nav img {
-  height: auto;
-}
-main .atf .atf-content nav > :nth-child(5) {
-  color: var(--color-secondary);
-  text-decoration: none;
-}
-main .atf .atf-content nav > :nth-child(5):hover {
-  text-decoration: underline;
-}
 main #main-content-section {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
+  margin-top: 5rem;
 }
 main #main-content-section .side-content {
   display: flex;
@@ -2242,17 +2197,18 @@ main #main-content-section .side-content {
 main #main-content-section .side-content .date-group {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  color: var(--color-primary-light);
 }
-main #main-content-section .side-content .date-group img {
-  width: auto;
-}
-main #main-content-section .side-content .date-group span {
-  color: var(--color-gray);
+main #main-content-section .side-content .date-group i {
+  margin-right: 0.5rem;
 }
 main #main-content-section .side-content .img-group {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+}
+main #main-content-section .side-content .img-group p {
+  font-weight: 700;
 }
 main #main-content-section .side-content .text-group {
   display: flex;
@@ -2264,187 +2220,122 @@ main #main-content-section .side-content .text-group h4 {
 }
 main #main-content-section .side-content .flex-group {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 2fr; /* الصورة تكون في العمود الأول والنص في العمود الثاني */
   gap: 2rem;
+  align-items: start; /* ضمان أن الصورة والنص يبدأان من نفس المستوى العلوي */
 }
 main #main-content-section .side-content .flex-group img {
+  grid-column: 1; /* الصورة في العمود الأول */
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  border-radius: 4px;
+}
+main #main-content-section .side-content .flex-group .text-group {
+  grid-column: 2; /* النص في العمود الثاني */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ضمان أن النص يبدأ من الأعلى */
 }
 main #main-content-section .side-content .tag-group {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main #main-content-section .side-content .tag-group h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 main #main-content-section .side-content .tag-group .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 main #main-content-section .side-content .tag-group .tags .tag {
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
   background-color: var(--color-accent);
-  transition: all 0.2s;
+  font-size: 12px;
+  color: var(--color-light);
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 main #main-content-section .side-content .tag-group .tags .tag:hover {
   background-color: var(--color-primary);
-}
-main #main-content-section .side-content .tag-group .tags .tag:hover span {
-  color: var(--color-light);
-}
-main #main-content-section .side-content .tag-group .tags .tag span {
-  display: block;
-  text-align: center;
-  padding: 0;
 }
 main #main-content-section .side-bar {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  height: fit-content;
+  width: 30%;
 }
 main #main-content-section .side-bar h4 {
-  font-size: inherit;
+  font-size: 18px;
+  font-weight: 600;
 }
 main #main-content-section .side-bar .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
+  max-width: 15rem;
 }
 main #main-content-section .side-bar .tags .tag {
   padding: 0.7rem 1rem;
   border-radius: 20px;
   border: 1px solid var(--color-border-gray);
-  transition: all 0.2s;
+  font-size: 12px;
   cursor: pointer;
+  transition: background-color 0.2s;
+}
+main #main-content-section .side-bar .tags .tag .tag-text {
+  color: var(--color-primary-dark);
 }
 main #main-content-section .side-bar .tags .tag:hover {
   background-color: var(--color-primary);
-}
-main #main-content-section .side-bar .tags .tag:hover span {
   color: var(--color-light);
 }
-main #main-content-section .side-bar .tags .tag span {
-  display: block;
-  text-align: center;
-  padding: 0;
-}
-main #main-content-section .side-bar .contact-box {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background-color: var(--color-primary);
-}
-main #main-content-section .side-bar .contact-box h4 {
-  color: var(--color-secondary);
-}
-main #main-content-section .side-bar .contact-box p {
-  color: var(--color-accent);
-}
-main #main-content-section .side-bar .contact-box .input-container {
-  position: relative;
-}
-main #main-content-section .side-bar .contact-box .input-container input {
-  display: flex;
-  background-color: var(--color-light);
-}
-main #main-content-section .side-bar .contact-box .input-container input:hover {
-  border-color: var(--color-border-dark);
-}
-main #main-content-section .side-bar .contact-box .input-container img {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  width: auto;
-  height: auto;
-  z-index: 2;
-}
-main #contact-details-section {
-  background-color: var(--color-accent);
-}
-main #contact-details-section .container {
-  display: flex;
-}
-main #contact-details-section .container .img-container {
-  position: relative;
-  width: 50%;
-}
-main #contact-details-section .container .img-container .img-vector {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-main #contact-details-section .container .img-container .img-person {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-main #contact-details-section .container .section-body {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding-left: 3rem;
-}
-main #contact-details-section .container .section-body .element-group {
-  display: flex;
-  gap: 1rem;
-}
-main #contact-details-section .container .section-body .element-group img {
-  max-height: auto;
-}
-main #contact-details-section .container .section-body .element-group .text-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-main #contact-details-section .container .section-body .element-group .text-group strong {
-  display: block;
-}
-
-.recent-projects {
-  font-family: Arial, sans-serif;
-  color: #535656;
-}
-.recent-projects h3 {
+main #main-content-section .side-bar .recent-projects h3 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: var(--color-primary);
+  margin-left: 1rem;
 }
-.recent-projects .project-list {
+main #main-content-section .side-bar .recent-projects .project-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.recent-projects .project-item {
+main #main-content-section .side-bar .recent-projects .project-item {
   display: flex;
-  align-items: center;
   gap: 1rem;
   padding: 1rem;
   border-bottom: 1px solid #ebebeb;
 }
-.recent-projects .project-item .project-img {
-  width: 60px;
-  height: 60px;
-  background-color: #ebebeb;
+main #main-content-section .side-bar .recent-projects .project-item .project-img {
+  width: 130px;
+  height: 80px;
+  overflow: hidden;
 }
-.recent-projects .project-item .project-info h4 {
+main #main-content-section .side-bar .recent-projects .project-item .project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main #main-content-section .side-bar .recent-projects .project-item .project-info h4 {
+  max-width: 10rem;
   font-size: 14px;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
+  color: var(--color-primary);
 }
-.recent-projects .project-item .project-info p {
+main #main-content-section .side-bar .recent-projects .project-item .project-info p {
   font-size: 12px;
   color: #9c9ea6;
 }
-.recent-projects .project-item .project-info p i {
+main #main-content-section .side-bar .recent-projects .project-item .project-info p i {
   margin-right: 0.5rem;
 }
 
@@ -2563,12 +2454,29 @@ main #contact-details-section .container .section-body .element-group .text-grou
   border: none;
 }
 
-.we-help-you {
+.we-help-you-box {
+  background-color: var(--color-primary);
+  padding: 1rem;
+  border-radius: 4px;
+  position: relative; /* لضبط الصورة بشكل نسبي */
+  max-width: 20rem;
+}
+.we-help-you-box .we-help-you-Headline {
+  color: var(--color-secondary);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.we-help-you-box .we-help-you-p {
+  color: var(--color-accent);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.we-help-you-box .we-help-you {
   position: relative;
   width: 100%;
   max-width: 400px;
 }
-.we-help-you input {
+.we-help-you-box .we-help-you input {
   width: 100%;
   padding: 0.85rem;
   padding-right: 3rem;
@@ -2578,13 +2486,13 @@ main #contact-details-section .container .section-body .element-group .text-grou
   font-style: italic;
   transition: border-color 0.3s ease;
 }
-.we-help-you input::placeholder {
+.we-help-you-box .we-help-you input::placeholder {
   color: var(--color-border-gray);
 }
-.we-help-you input:focus, .we-help-you input:hover {
+.we-help-you-box .we-help-you input:focus, .we-help-you-box .we-help-you input:hover {
   border-color: var(--color-border-dark);
 }
-.we-help-you .we-help-icon {
+.we-help-you-box .we-help-you .we-help-icon {
   position: absolute;
   top: 50%;
   right: 1rem;
@@ -2592,6 +2500,12 @@ main #contact-details-section .container .section-body .element-group .text-grou
   pointer-events: none;
   color: var(--color-border-gray);
   font-size: 1.2rem;
+}
+.we-help-you-box .we-help-you-image {
+  position: absolute; /* لجعل الصورة تتحرك داخل الحاوية */
+  bottom: 0;
+  right: 0;
+  width: 46%;
 }
 
 #next-project {

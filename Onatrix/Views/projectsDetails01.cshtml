@@ -7,7 +7,28 @@
 
       var leftSectionImage01 = Model?.Value<IPublishedContent>("leftSectionImage01")?.Url() ?? "";
       var leftSectionImage02 = Model?.Value<IPublishedContent>("leftSectionImage02")?.Url() ?? "";
-          var leftSectionImage03 = Model?.Value<IPublishedContent>("leftSectionImage03")?.Url() ?? "";
+      var leftSectionImage03 = Model?.Value<IPublishedContent>("leftSectionImage03")?.Url() ?? "";
+
+
+
+
+    // Git vlues from other page///////////
+    var linkedPage = Umbraco.Content(Guid.Parse("1e582f8f-7138-40fd-883a-390eb32d62fa"));
+
+    var lOurProjectsImage01 = linkedPage?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
+    var lOurProjectsImage02 = linkedPage?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
+    var lOurProjectsImage03 = linkedPage?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
+    var lOurProjectsImage04 = linkedPage?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
+
+    var tag01 = linkedPage?.Value<string>("tag01") ?? "No Tag Found";
+    var tag02 = linkedPage?.Value<string>("tag02") ?? "No Tag Found";
+    var tag03 = linkedPage?.Value<string>("tag03") ?? "No Tag Found";
+    var tag04 = linkedPage?.Value<string>("tag04") ?? "No Tag Found";
+    var tag05 = linkedPage?.Value<string>("tag05") ?? "No Tag Found";
+    var tag06 = linkedPage?.Value<string>("tag06") ?? "No Tag Found";
+    var tag07 = linkedPage?.Value<string>("tag07") ?? "No Tag Found";
+
+    var tag08 = linkedPage?.Value<string>("tag08") ?? "No Tag Found";
 
 
 }
@@ -46,39 +67,41 @@
       <div class="side-content">
         <div class="date-group">
           <i class="fas fa-calendar-alt"></i>
-          <span>@Model.Value("leftSectionDate")</span>
+            <span class="date-group">@Model?.Value("leftSectionDate")</span>
         </div>
         <div class="img-group">
-          <p>@Model.Value("leftSectionHeadline01")</p>
-          <img src="@leftSectionImage01"></img>
+          <p>@Model?.Value("leftSectionHeadline01")</p>
+          <img src="@leftSectionImage01"><img>
         </div>
         <div class="text-group">
-        @Model.Value("leftSectionTextPart01")
+        @Model?.Value("leftSectionTextPart01")
         </div>
+
         <div class="flex-group">
-          <img src="@leftSectionImage02"></img>
+          <img src="@leftSectionImage02"><img>
           <div class="text-group">
-          @Model.Value("leftSectionTextPart02")
+          @Model?.Value("leftSectionTextPart02")
           </div>
         </div>
+
         <div class="text-group">
-         @Model.Value("leftSectionTextPart03")
+         @Model?.Value("leftSectionTextPart03")
         </div>
-        <img src="@leftSectionImage03"></img>
+        <img src="@leftSectionImage03"><img>
         <div class="text-group">
-  @Model.Value("leftSectionTextPart04")
+          @Model?.Value("leftSectionTextPart04")
         </div>
         <div class="tag-group">
           <h4>Tags:</h4>
           <div class="tags">
             <div class="tag">
-              <span>@Model.Value("leftTag01")</span>
+              <span>@Model?.Value("leftTag01")</span>
             </div>
             <div class="tag">
-              <span>@Model.Value("leftTag02")</span>
+              <span>@Model?.Value("leftTag02")</span>
             </div>
             <div class="tag">
-              <span>@Model.Value("leftTag03")</span>
+              <span>@Model?.Value("leftTag03")</span>
             </div>
           </div>
         </div>
@@ -97,11 +120,15 @@
 
 <!--- Tags section  -->
       <div class="side-bar">
-        <div class="recent-projects">
+
+<div class="recent-projects">
   <h3>Recent projects</h3>
   <div class="project-list">
+
     <div class="project-item">
-      <div class="project-img"></div>
+      <div class="project-img">
+        <img src="@lOurProjectsImage01" alt="Annual Report for Juva Inc.">
+      </div>
       <div class="project-info">
         <h4>Annual Report for Juva Inc.</h4>
         <p><i class="fas fa-calendar-alt"></i> June 15, 2024</p>
@@ -109,7 +136,9 @@
     </div>
 
     <div class="project-item">
-      <div class="project-img"></div>
+      <div class="project-img">
+        <img src="@lOurProjectsImage02" alt="Business Insights for SP Group Inc.">
+      </div>
       <div class="project-info">
         <h4>Business Insights for SP Group Inc.</h4>
         <p><i class="fas fa-calendar-alt"></i> May 17, 2024</p>
@@ -117,7 +146,9 @@
     </div>
 
     <div class="project-item">
-      <div class="project-img"></div>
+      <div class="project-img">
+        <img src="@lOurProjectsImage03" alt="Financial Advisors to Irra Group Inc.">
+      </div>
       <div class="project-info">
         <h4>Financial Advisors to Irra Group Inc.</h4>
         <p><i class="fas fa-calendar-alt"></i> February 6, 2024</p>
@@ -125,35 +156,35 @@
     </div>
 
     <div class="project-item">
-      <div class="project-img"></div>
+      <div class="project-img">
+        <img src="@lOurProjectsImage04" alt="Budget Planning for Buccura Inc.">
+      </div>
       <div class="project-info">
         <h4>Budget Planning for Buccura Inc.</h4>
         <p><i class="fas fa-calendar-alt"></i> January 3, 2024</p>
       </div>
     </div>
+
   </div>
 </div>
+
+
         <h4>Tags</h4>
         <div class="tags">
-          <div class="tag"><span>Report</span></div>
-          <div class="tag"><span>Finance</span></div>
-          <div class="tag"><span>Project</span></div>
-          <div class="tag"><span>Pricing</span></div>
-          <div class="tag"><span>App</span></div>
-          <div class="tag"><span>Business</span></div>
-          <div class="tag"><span>Insights</span></div>
-          <div class="tag"><span>Business plans</span></div>
+            <div class="tag"><span class="tag-text">@tag01</span></div>
+            <div class="tag"><span class="tag-text">@tag02</span></div>
+            <div class="tag"><span class="tag-text">@tag03</span></div>
+            <div class="tag"><span class="tag-text">@tag04</span></div>
+            <div class="tag"><span class="tag-text">@tag05</span></div>
+            <div class="tag"><span class="tag-text">@tag06</span></div>
+            <div class="tag"><span class="tag-text">@tag07</span></div>
+            <div class="tag"><span class="tag-text">@tag08</span></div>
         </div>
 
-        <form class="contact-box">
-          <h4>How can we help you?</h4>
-          <p>Online support 24/7, we are here to help you</p>
-          <div class="input-container">
-            <input type="email" placeholder="E-mail address"></input>
-            <img src="./images/Icon-mail.png"></img>
-          </div>
-      
-        </form>
+
+         <!-------How can we help you?-------------------->
+         @await Html.PartialAsync("partials/static/we-help-you.cshtml")
+
       </div>  
 
 
@@ -161,12 +192,6 @@
 
 
     </section>
-
-
-
-
-
-
 
 
 
