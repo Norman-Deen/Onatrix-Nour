@@ -63,12 +63,12 @@
 
 
 
-@*----------our-services/Partial-----------*@
+<!----------our-services/Partial----------->
 @await Html.PartialAsync("partials/static/our-services.cshtml")
 
 
-@*----------we-are-----------*@
-<section id="we-are" class="we-are">
+<!----------we-are----------->
+<section class="we-are">
     <div class="container">
         <div class="content">
             <h2>@Model?.Value("weAreHeadlineFirstRow")</h2>
@@ -79,18 +79,18 @@
             </div>
         </div>
 
-        <div class="image1">
+        <div class="we-are-image1">
             <img src="@weAreImage1" alt="">
         </div>
-        <div class="image2">
+        <div class="we-are-image2">
             <img src="@weAreImage2" alt="Image of @Model?.Value("weAreHeadlineSecondRow")">
         </div>
     </div>
 </section>
 
 
-@*----------success-----------*@
-<section id="success" class="success">
+<!----------success----------->
+<section class="success">
     <div class="bg-primary">
         <div class="container">
             <h6>@Model?.Value("successHeadline")</h6>
@@ -109,10 +109,10 @@
                     <h5>@Model?.Value("successStory3Text")</h5>
                 </div>
             </div>
-            <div class="image1">
+            <div class="success-image1">
                 <img src="@successImage1" alt="">
             </div>
-            <div class="image2">
+            <div class="success-image2">
                 <img src="@successImage2" alt="">
             </div>
         </div>
@@ -120,8 +120,8 @@
 </section>
 
 
-@*----------our-projects-----------*@
-<section id="our-projects" class="our-projects">
+<!----------our-projects----------->
+<section class="our-projects">
     <div class="container">
         <h6>@Model?.Value("projectsHeadline")</h6>
         <h2>@Model?.Value("projectsTitle")</h2>
@@ -129,7 +129,7 @@
     <div class="projects">
         
         <a href="@Model?.Value("projectsProject1Link")" class="project">
-            <div class="image">
+            <div class="our-projects-image">
                 <img src="@projectsProject1Image" alt="Image of @Model?.Value("projectsProject1Headline")">
             </div>
             <div class="bg-primary">
@@ -139,7 +139,7 @@
         </a>
 
         <a href="@Model?.Value("projectsProject2Link")" class="project">
-            <div class="image">
+            <div class="our-projects-image">
                 <img src="@projectsProject2Image" alt="Image of @Model?.Value("projectsProject2Headline")">
             </div>
             <div class="bg-primary-active">
@@ -153,7 +153,7 @@
         </a>
 
         <a href="@Model?.Value("projectsProject3Link")" class="project">
-            <div class="image">
+            <div class="our-projects-image">
                 <img src="@projectsProject3Image" alt="Image of @Model?.Value("projectsProject3Headline")">
             </div>
             <div class="bg-primary">
@@ -163,7 +163,7 @@
         </a>
 
         <a href="@Model?.Value("projectsProject4Link")" class="project">
-            <div class="image">
+            <div class="our-projects-image">
                 <img src="@projectsProject4Image" alt="Image of @Model?.Value("projectsProject4Headline")">
             </div>
             <div class="bg-primary">

@@ -1,0 +1,21 @@
+﻿.partners {
+    padding: 4rem 0;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap; // يسمح بالتفاف العناصر إذا كانت الشاشة ضيقة
+
+        .partner {
+            max-width: 150px; // تخصيص العرض الأقصى لكل شريك
+            margin: 1rem;
+
+            img {
+                max-width: 100%; // استخدام max-width لضمان أن الصورة لا تتجاوز حجم الحاوية
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}

@@ -2,16 +2,20 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
 @{
-    var rootContents = UmbracoHelper.ContentAtRoot();
-    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
-    var footerRights = settings?.Value<string>("footerRights") ?? "";
+    var rootContents       = UmbracoHelper.ContentAtRoot();
+    var settings           = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    var footerRights       = settings?.Value<string>("footerRights") ?? "";
     var footerRightsMobile = settings?.Value<string>("footerRightsMobile") ?? "";
-    var footerCompanyName = settings?.Value<string>("footerCompanyName") ?? "";
+    var footerCompanyName  = settings?.Value<string>("footerCompanyName") ?? "";
 }
-        
-        <footer id="footer" class="bg-dark">
+
+
+
+<footer class="footer bg-dark">
+
            <div class="container">
                 <p class="rights">© @DateTime.Now.Year @footerRights</p>
                 <p class="left">@footerCompanyName</p>
            </div>
-        </footer>
+
+</footer>

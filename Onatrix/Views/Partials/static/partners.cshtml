@@ -6,41 +6,34 @@
     var rootContents = UmbracoHelper.ContentAtRoot();
     var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
 
-    var partnersImage1 = settings?.Value<IPublishedContent>("partnersImage1")?.Url() ?? "";
-    var partnersImage2 = settings?.Value<IPublishedContent>("partnersImage2")?.Url() ?? "";
-    var partnersImage3 = settings?.Value<IPublishedContent>("partnersImage3")?.Url() ?? "";
-    var partnersImage4 = settings?.Value<IPublishedContent>("partnersImage4")?.Url() ?? "";
-    var partnersImage5 = settings?.Value<IPublishedContent>("partnersImage5")?.Url() ?? "";
-    var partnersImage6 = settings?.Value<IPublishedContent>("partnersImage6")?.Url() ?? "";
+    var partnersImages = new List<string>(); // قائمة الصور الخاصة بالشركاء
 
+    
+    if (settings != null) // إضافة صور الشركاء إلى القائمة
+    {
+        var image1 = settings.Value<IPublishedContent>("partnersImage1")?.Url();
+        var image2 = settings.Value<IPublishedContent>("partnersImage2")?.Url();
+        var image3 = settings.Value<IPublishedContent>("partnersImage3")?.Url();
+        var image4 = settings.Value<IPublishedContent>("partnersImage4")?.Url();
+        var image5 = settings.Value<IPublishedContent>("partnersImage5")?.Url();
+        var image6 = settings.Value<IPublishedContent>("partnersImage6")?.Url();
 
+        if (!string.IsNullOrEmpty(image1)) partnersImages.Add(image1);
+        if (!string.IsNullOrEmpty(image2)) partnersImages.Add(image2);
+        if (!string.IsNullOrEmpty(image3)) partnersImages.Add(image3);
+        if (!string.IsNullOrEmpty(image4)) partnersImages.Add(image4);
+        if (!string.IsNullOrEmpty(image5)) partnersImages.Add(image5);
+        if (!string.IsNullOrEmpty(image6)) partnersImages.Add(image6);
+    }
 }
 
-<section id="partners" class="partners bg-gray">
+<section class="partners bg-gray">
     <div class="container">
-        <div class="partner">
-            <img src="@partnersImage1" alt="Image of partners logo">
-        </div>
-
-        <div class="partner">
-            <img src="@partnersImage2" alt="Image of partners logo">
-        </div>
-
-        <div class="partner">
-            <img src="@partnersImage3" alt="Image of partners logo">
-        </div>
-
-        <div class="partner">
-            <img src="@partnersImage4" alt="Image of partners logo">
-        </div>
-
-        <div class="partner">
-            <img src="@partnersImage5" alt="Image of partners logo">
-        </div>
-
-        <div class="partner">
-           <img src="@partnersImage6" alt="Image of partners logo">
-        </div>
+        @foreach (var image in partnersImages)
+        {
+            <div class="partner">
+                <img src="@image" alt="Image of partners logo">
+            </div>
+        }
     </div>
-
 </section>

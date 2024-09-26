@@ -1313,17 +1313,17 @@ h6 {
   margin-bottom: 2rem;
 }
 
-#we-are {
+.we-are {
   margin-top: 8rem;
 }
-#we-are .container {
+.we-are .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
 }
-#we-are .container .content {
+.we-are .container .content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1331,18 +1331,19 @@ h6 {
   width: 50%;
   position: relative; /* مهم لتفعيل z-index */
   z-index: 1; /* وضعها فوق الصورة */
+  overflow: hidden;
 }
-#we-are .container .content h2 {
+.we-are .container .content h2 {
   margin: 0;
 }
-#we-are .container .content .h2 {
+.we-are .container .content .h2 {
   color: var(--color-secondary);
 }
-#we-are .container .content p {
+.we-are .container .content p {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-#we-are .container .image1 {
+.we-are .container .we-are-image1 {
   width: 100%;
   height: auto;
   margin-top: -6rem;
@@ -1354,70 +1355,70 @@ h6 {
   opacity: 0.35;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-#we-are .container .image1 img {
+.we-are .container .we-are-image1 img {
   width: 77%;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-#we-are .container .image1:hover {
+.we-are .container .we-are-image1:hover {
   opacity: 1;
 }
-#we-are .container .image1:hover img {
+.we-are .container .we-are-image1:hover img {
   transform: scale(0.9);
 }
-#we-are .container .image2 {
+.we-are .container .we-are-image2 {
   width: 100%;
   height: auto;
   margin-top: 5rem;
   z-index: 1;
 }
-#we-are .container .image2 img {
+.we-are .container .we-are-image2 img {
   width: 100%;
   height: auto;
 }
 
-#success .bg-primary {
+.success .bg-primary {
   padding-top: 6rem;
   height: 60rem;
   position: relative;
 }
-#success .bg-primary .container {
+.success .bg-primary .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
 }
-#success .bg-primary .container h6, #success .bg-primary .container h2 {
+.success .bg-primary .container h6, .success .bg-primary .container h2 {
   position: relative;
   z-index: 2;
   text-align: center;
 }
-#success .bg-primary .container .success-stories {
+.success .bg-primary .container .success-stories {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
   z-index: 2;
 }
-#success .bg-primary .container .success-stories .success-story {
+.success .bg-primary .container .success-stories .success-story {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex: 1;
 }
-#success .bg-primary .container .success-stories .success-story h1 {
+.success .bg-primary .container .success-stories .success-story h1 {
   color: var(--color-secondary);
   margin: 0;
   font-size: 5rem;
   font-weight: 600;
 }
-#success .bg-primary .container .success-stories .success-story h5 {
+.success .bg-primary .container .success-stories .success-story h5 {
   text-align: center;
   font-weight: 400;
   font-size: 1.2rem;
 }
-#success .bg-primary .container .image1 {
+.success .bg-primary .container .success-image1 {
   display: block;
   width: 100%;
   height: auto;
@@ -1425,34 +1426,32 @@ h6 {
   top: 1rem;
   z-index: 1;
 }
-#success .bg-primary .container .image1 img {
+.success .bg-primary .container .success-image1 > img {
   width: 100%;
-  height: auto;
 }
-#success .bg-primary .container .image2 {
+.success .bg-primary .container .success-image2 {
   display: block;
   width: 100%;
   height: auto;
   padding: 4rem;
   position: relative;
-  top: 3rem;
+  top: 6rem;
   right: 0;
   z-index: 2;
 }
-#success .bg-primary .container .image2 img {
+.success .bg-primary .container .success-image2 > img {
   width: 100%;
-  height: auto;
 }
 
-#our-projects {
-  margin-top: 16rem;
+.our-projects {
+  margin-top: 19rem;
 }
-#our-projects .projects {
+.our-projects .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 3rem;
 }
-#our-projects .projects .project {
+.our-projects .projects .project {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1461,17 +1460,17 @@ h6 {
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
-#our-projects .projects .project .image {
+.our-projects .projects .project .our-projects-image {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
-#our-projects .projects .project .image img {
+.our-projects .projects .project .our-projects-image img {
   width: 100%;
   height: auto;
 }
-#our-projects .projects .project .bg-primary,
-#our-projects .projects .project .bg-primary-active {
+.our-projects .projects .project .bg-primary,
+.our-projects .projects .project .bg-primary-active {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1480,55 +1479,41 @@ h6 {
   transform: translateY(100%);
   opacity: 0;
 }
-#our-projects .projects .project:hover .bg-primary, #our-projects .projects .project:hover .bg-primary-active {
+.our-projects .projects .project:hover .bg-primary, .our-projects .projects .project:hover .bg-primary-active {
   transform: translateY(0);
   opacity: 1;
 }
-#our-projects .projects .project .bg-primary {
+.our-projects .projects .project .bg-primary {
   background-color: rgba(0, 0, 0, 0.5);
   height: 5.5rem;
 }
-#our-projects .projects .project .bg-primary h5 {
+.our-projects .projects .project .bg-primary h5 {
   margin-top: 1.2rem;
   font-weight: 400;
 }
-#our-projects .projects .project .bg-primary p {
+.our-projects .projects .project .bg-primary p {
   margin-top: -0.3rem;
 }
-#our-projects .projects .project .bg-primary-active {
+.our-projects .projects .project .bg-primary-active {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--color-primary);
   padding: 1rem;
 }
-#our-projects .projects .project .bg-primary-active .info h5 {
+.our-projects .projects .project .bg-primary-active .info h5 {
   margin-top: 1.8rem;
   margin-bottom: 0.6rem;
   font-weight: 600;
   color: var(--color-secondary);
 }
-#our-projects .projects .project .bg-primary-active .info p {
+.our-projects .projects .project .bg-primary-active .info p {
   margin-top: -0.4rem;
   color: var(--color-light);
 }
-#our-projects .projects .project .bg-primary-active .chevron {
+.our-projects .projects .project .bg-primary-active .chevron {
   color: var(--color-light);
   font-size: 3rem;
-}
-
-#partners {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-#partners .container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-#partners .container .partner img {
-  width: 100%;
-  height: auto;
 }
 
 .services-our-services .bg-gray {
@@ -2195,85 +2180,86 @@ main #main-content-section .side-bar .recent-projects .project-item .project-inf
   margin-right: 0.5rem;
 }
 
-#header .background-primary {
+.header .background-primary {
   background-color: var(--color-primary);
 }
-#header .background-primary .container {
+.header .background-primary .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
 }
-#header .background-primary .container .text {
+.header .background-primary .container .header-text {
   display: block;
 }
-#header .background-primary .container .text p {
+.header .background-primary .container .header-text p {
   padding: 0;
   color: var(--color-light);
   font-size: 0.8rem;
 }
-#header .background-primary .container .social-icons {
+.header .background-primary .container .header-icons {
   display: flex;
   align-items: center;
 }
-#header .background-primary .container .social-icons a {
+.header .background-primary .container .header-icons a {
   padding: 0.7rem;
   border-left: 1px solid;
   border-right: 1px solid;
   border-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
-#header .background-primary .container .social-icons i {
+.header .background-primary .container .header-icons i {
   font-size: 14px;
   color: var(--color-light);
-  transition: opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
-#header .background-primary .container .social-icons i:hover {
+.header .background-primary .container .header-icons i:hover {
   opacity: 0.3;
+  transform: scale(1.5);
 }
-#header .background-light {
+.header .background-header {
   background-color: var(--color-light);
 }
-#header .background-light .container {
+.header .background-header .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   height: 80px;
 }
-#header .background-light .container .logo {
+.header .background-header .container .logo {
   display: block;
 }
-#header .background-light .container .logo a img {
+.header .background-header .container .logo a img {
   height: 100%;
   width: 100%;
 }
-#header .background-light .container .links {
+.header .background-header .container .links {
   display: flex;
   gap: 4rem;
 }
-#header .background-light .container .links a {
+.header .background-header .container .links a {
   color: var(--color-primary);
   font-weight: 700;
   text-decoration: none;
 }
-#header .background-light .container .search-icon {
+.header .background-header .container .search-icon {
   justify-self: end;
 }
-#header .background-light .container .search-icon a {
+.header .background-header .container .search-icon a {
   color: var(--color-primary);
 }
 
-#footer .container {
+.footer .container {
   display: flex;
   justify-content: start;
   align-items: center;
   padding-top: 1rem;
 }
-#footer .container .rights {
+.footer .container .rights {
   display: block;
   color: var(--color-primary);
 }
-#footer .container .left {
+.footer .container .left {
   margin-left: 0.5rem;
   color: var(--color-light);
 }
@@ -2628,4 +2614,23 @@ main #main-content-section .side-bar .recent-projects .project-item .project-inf
 }
 .call-box form .select-wrapper .select.open .arrow::after {
   transform: rotate(45deg);
+}
+
+.partners {
+  padding: 4rem 0;
+}
+.partners .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.partners .container .partner {
+  max-width: 150px;
+  margin: 1rem;
+}
+.partners .container .partner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

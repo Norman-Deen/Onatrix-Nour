@@ -62,8 +62,8 @@
 
 
 
-//We-are///////////////////////////////////////////
-#we-are {
+//We-are
+.we-are {
     margin-top: 8rem;
 
     .container {
@@ -73,6 +73,7 @@
         flex-direction: column;
         position: relative;
 
+
         .content {
             display: flex;
             justify-content: center;
@@ -81,6 +82,7 @@
             width: 50%;
             position: relative; /* مهم لتفعيل z-index */
             z-index: 1; /* وضعها فوق الصورة */
+            overflow: hidden;
 
             h2 {
                 margin: 0;
@@ -96,11 +98,11 @@
             }
         }
 
-        .image1 {
+        .we-are-image1 {
             width: 100%;
             height: auto;
             margin-top: -6rem;
-            margin-left: 33rem;
+            margin-left:33rem;
             position: absolute;
             top: 0;
             left: 0;
@@ -108,9 +110,12 @@
             opacity: 0.35;
             transition: transform 0.5s ease, opacity 0.5s ease;
 
+
+
             img {
                 width: 77%;
                 transition: transform 0.5s ease, opacity 0.5s ease;
+               
             }
 
             &:hover {
@@ -122,7 +127,7 @@
             }
         }
 
-        .image2 {
+        .we-are-image2 {
             width: 100%;
             height: auto;
             margin-top: 5rem;
@@ -139,12 +144,13 @@
 
 
 
-//Success///////////////////////////////////////////
-#success {
+
+//Success
+.success {
     .bg-primary {
         padding-top: 6rem;
         height: 60rem;
-        position: relative; 
+        position: relative;
 
         .container {
             display: flex;
@@ -152,10 +158,10 @@
             align-items: center;
             flex-direction: column;
             position: relative;
-          
+
             h6, h2 {
                 position: relative;
-                z-index: 2; 
+                z-index: 2;
                 text-align: center;
             }
 
@@ -164,7 +170,7 @@
                 justify-content: center;
                 align-items: center;
                 gap: 4rem;
-                z-index: 2; 
+                z-index: 2;
 
                 .success-story {
                     display: flex;
@@ -172,7 +178,7 @@
                     align-items: center;
                     flex-direction: column;
                     flex: 1;
-                   
+
 
                     h1 {
                         color: var(--color-secondary);
@@ -188,33 +194,34 @@
                     }
                 }
             }
-            .image1 {
+
+            .success-image1 {
                 display: block;
                 width: 100%;
                 height: auto;
                 position: absolute;
                 top: 1rem;
-                z-index: 1; 
+                z-index: 1;
 
-                img {
+               > img {
                     width: 100%;
-                    height: auto;
+                  
                 }
             }
-           
-            .image2 {
+
+            .success-image2 {
                 display: block;
                 width: 100%;
                 height: auto;
                 padding: 4rem;
-                position: relative; 
-                top: 3rem;
+                position: relative;
+                top: 6rem;
                 right: 0;
                 z-index: 2;
 
-                img {
+               > img {
                     width: 100%;
-                    height: auto;
+                    
                 }
             }
         }
@@ -224,9 +231,9 @@
 
 
 
-//Our-projects///////////////////////////////////////////
-#our-projects {
-    margin-top: 16rem;
+//Our-projects
+.our-projects {
+    margin-top: 19rem;
 
     .projects {
         display: grid;
@@ -242,7 +249,7 @@
             overflow: hidden;
             transition: transform 0.3s ease-in-out;
 
-            .image {
+            .our-projects-image {
                 width: 100%;
                 height: auto;
                 overflow: hidden;
@@ -309,24 +316,6 @@
                     color: var(--color-light);
                     font-size: 3rem;
                 }
-            }
-        }
-    }
-}
-
-#partners {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-
-    .container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        .partner {
-            img {
-                width: 100%;
-                height: auto;
             }
         }
     }
