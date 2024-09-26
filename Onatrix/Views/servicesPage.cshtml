@@ -1,16 +1,16 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-	Layout = "mainLayout.cshtml";
-    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+	Layout                   = "mainLayout.cshtml";
+    ViewBag.Title            = Model?.Value("pageTitle") ?? null;
 
     var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
 }
 
 
-@*----------Nour/Fix Name-----------*@
-<section id="about" class="banner bg-gray">
-    <div class="background"> 
+<!----------banner----------->
+<section class="banner bg-gray">
+    <div class="banner-background">
         <img src="@aboutBackgroundImage" alt="Backround image">
         <div class="content">
             <h2>@Model?.Value("aboutHeadline")</h2>
@@ -25,18 +25,16 @@
 
 
 
-@*----------our-services/Partial-----------*@
+<!----------our-services/Partial----------->
 <div class="services-our-services">
     @await Html.PartialAsync("partials/static/our-services.cshtml")
 </div>
 
 
-@*----------pagnaitior/Partial-----------*@
+<!----------pagnaitior/Partial----------->
 @await Html.PartialAsync("partials/static/pagnaition.cshtml")
 
 
 
-@*----------next-project/Partial-----------*@
+<!----------next-project/Partial----------->
 @await Html.PartialAsync("partials/static/next-project.cshtml")
-
-

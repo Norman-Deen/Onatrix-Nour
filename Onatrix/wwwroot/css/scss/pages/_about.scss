@@ -1,5 +1,7 @@
-﻿//Ceo///////////////////////////////////////////
-#ceo {
+﻿
+//Ceo
+.ceo {
+
     .container {
         padding-top: 3rem;
         display: flex;
@@ -11,12 +13,12 @@
             flex: 1;
             padding: 2rem;
 
-            img {
+            > img {
                 width: 100%;
                 height: auto;
             }
 
-            h5 {
+           > h5 {
                 font-weight: 400;
                 font-style: oblique;
                 margin-top: 1rem;
@@ -27,12 +29,12 @@
             flex: 2;
             padding: 2rem;
 
-            h4 {
+           > h4 {
                 font-weight: 400;
                 font-style: oblique;
             }
 
-            h6 {
+          > h6 {
                 margin-top:1rem;
                 font-size:0.95rem;
                 font-weight: 400;
@@ -44,29 +46,30 @@
 }
 
 
-//REVIEWS/////////////////////////////////////////
-#reviews {
+//REVIEWS
+.reviews {
     position: relative;
     height: 500px;
     margin-top: 8rem;
 
-    .container {
+   > .container {
         display: flex;
         justify-content: space-between;
         align-items: start;
 
-        .content {
+      >  .content {
             margin-top: 5rem;
             width: 50%;
             padding-right: 9rem;
 
             .reviews-text {
-                h6 {
+
+              > h6 {
                     font-size: 1rem;
                     font-weight: 600;
                 }
 
-                h5 {
+               > h5 {
                     font-size: 1.2rem;
                     font-weight: 400;
                     font-style: oblique;
@@ -81,7 +84,7 @@
                     margin-bottom: 1rem;
                 }
 
-                p {
+               > p {
                     padding: 0;
                 }
 
@@ -96,9 +99,9 @@
         .reviews-image {
             position: absolute;
             top: 0;
-            left: 810px;
+            left: 855px;
 
-            img {
+           > img {
                 height: 500px;
             }
         }
@@ -107,11 +110,11 @@
 
 
 
-//our-experts////////////////////////////////////////////
-#our-experts {
+//our-experts
+.our-experts {
     .container {
 
-        .headline {
+      > .headline {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -119,7 +122,7 @@
             flex-direction: column;
             margin-top: 7rem;
 
-            h2 {
+            > h2 {
                 max-width: 550px;
             }
         }
@@ -131,36 +134,36 @@
             margin-top: 1rem;
             gap: 2rem;
 
-            .our-expert { 
-                border: 1px solid var(--color-border-gray); 
-             
-                .image {
+            .our-expert {
+                border: 1px solid var(--color-border-gray);
+
+              > .image {
                     width: 100%;
                     height: auto;
                     position: relative;
                     overflow: hidden;
 
-                    img {
+                    > img {
                         width: 100%;
                         height: auto;
                         transition: transform 0.5s ease, opacity 0.5s ease;
-                    }
 
-                    &:hover img {
-                        transform: scale(1.1);
-                        opacity: 0.8;
+                        &:hover {
+                            transform: scale(1.1);
+                            opacity: 0.8;
+                        }
                     }
                 }
 
-                h4, h5 {
-                    padding: 1rem;
-                    margin-top: 1rem;
-                    margin-bottom: 0;
+                > h4, > h5 {
+                    padding: 1.5rem;
+                //  margin-top: 0.5rem;
+                    margin-bottom: -2rem;
                 }
 
-                p {
-                    padding: 1rem;
-                    margin-top: 0rem;
+                > p {
+                    padding: 1.5rem;
+                    margin-top: -3rem;
                     opacity: 0.7;
                 }
             }

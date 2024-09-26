@@ -1,43 +1,38 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-    Layout = "mainLayout.cshtml";
-    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+    Layout                   = "mainLayout.cshtml";
+    ViewBag.Title            = Model?.Value("pageTitle") ?? null;
     var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
 
-      var leftSectionImage01 = Model?.Value<IPublishedContent>("leftSectionImage01")?.Url() ?? "";
-      var leftSectionImage02 = Model?.Value<IPublishedContent>("leftSectionImage02")?.Url() ?? "";
-      var leftSectionImage03 = Model?.Value<IPublishedContent>("leftSectionImage03")?.Url() ?? "";
+    var leftSectionImage01   = Model?.Value<IPublishedContent>("leftSectionImage01")?.Url() ?? "";
+    var leftSectionImage02   = Model?.Value<IPublishedContent>("leftSectionImage02")?.Url() ?? "";
+    var leftSectionImage03   = Model?.Value<IPublishedContent>("leftSectionImage03")?.Url() ?? "";
 
 
+    //Get values from another page
+    var linkedPage           = Umbraco.Content(Guid.Parse("1e582f8f-7138-40fd-883a-390eb32d62fa"));
 
+    var lOurProjectsImage01  = linkedPage?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
+    var lOurProjectsImage02  = linkedPage?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
+    var lOurProjectsImage03  = linkedPage?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
+    var lOurProjectsImage04  = linkedPage?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
 
-    // Git vlues from other page///////////
-    var linkedPage = Umbraco.Content(Guid.Parse("1e582f8f-7138-40fd-883a-390eb32d62fa"));
-
-    var lOurProjectsImage01 = linkedPage?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
-    var lOurProjectsImage02 = linkedPage?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
-    var lOurProjectsImage03 = linkedPage?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
-    var lOurProjectsImage04 = linkedPage?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
-
-    var tag01 = linkedPage?.Value<string>("tag01") ?? "No Tag Found";
-    var tag02 = linkedPage?.Value<string>("tag02") ?? "No Tag Found";
-    var tag03 = linkedPage?.Value<string>("tag03") ?? "No Tag Found";
-    var tag04 = linkedPage?.Value<string>("tag04") ?? "No Tag Found";
-    var tag05 = linkedPage?.Value<string>("tag05") ?? "No Tag Found";
-    var tag06 = linkedPage?.Value<string>("tag06") ?? "No Tag Found";
-    var tag07 = linkedPage?.Value<string>("tag07") ?? "No Tag Found";
-
-    var tag08 = linkedPage?.Value<string>("tag08") ?? "No Tag Found";
-
-
+    var tag01                = linkedPage?.Value<string>("tag01") ?? "No Tag Found";
+    var tag02                = linkedPage?.Value<string>("tag02") ?? "No Tag Found";
+    var tag03                = linkedPage?.Value<string>("tag03") ?? "No Tag Found";
+    var tag04                = linkedPage?.Value<string>("tag04") ?? "No Tag Found";
+    var tag05                = linkedPage?.Value<string>("tag05") ?? "No Tag Found";
+    var tag06                = linkedPage?.Value<string>("tag06") ?? "No Tag Found";
+    var tag07                = linkedPage?.Value<string>("tag07") ?? "No Tag Found";
+    var tag08                = linkedPage?.Value<string>("tag08") ?? "No Tag Found";
 }
 
 
 
 <!-------banner-------------------->
-<section id="about" class="banner bg-gray">
-    <div class="background"> 
+<section class="banner bg-gray">
+    <div class="banner-background">
         <img src="@aboutBackgroundImage" alt="Background image">
         <div class="content">
             <h2>@Model?.Value("aboutHeadline")</h2>
@@ -53,74 +48,67 @@
 </section>
 
 
-@*
 
-@Model.Value("leftSectionDate")
+<!----------  left section  ---------->
 
-
-*@
-
-
-   <!----------  left section  ---------->
-    <section id="main-content-section" class="page-section container">
+<!----section 01---->
+<section class="projects-details container">
       
-      <div class="side-content">
-        <div class="date-group">
-          <i class="fas fa-calendar-alt"></i>
-            <span class="date-group">@Model?.Value("leftSectionDate")</span>
-        </div>
-        <div class="img-group">
-          <p>@Model?.Value("leftSectionHeadline01")</p>
-          <img src="@leftSectionImage01"><img>
-        </div>
+<div class="side-content">
+    <div class="date-group">
+    <i class="fas fa-calendar-alt"></i>
+    <span class="date-group">@Model?.Value("leftSectionDate")</span>
+    </div>
+    <div class="img-group">
+    <p>@Model?.Value("leftSectionHeadline01")</p>
+    <img src="@leftSectionImage01"><img>
+    </div>
+    <div class="text-group">
+    @Model?.Value("leftSectionTextPart01")
+    </div>
+
+        <!----section 02---->
+    <div class="recent-projects">
+        <img src="@leftSectionImage02"><img>
         <div class="text-group">
-        @Model?.Value("leftSectionTextPart01")
+        @Model?.Value("leftSectionTextPart02")
         </div>
+    </div>
 
-        <div class="flex-group">
-          <img src="@leftSectionImage02"><img>
-          <div class="text-group">
-          @Model?.Value("leftSectionTextPart02")
-          </div>
+
+        <!----section 03---->
+    <div class="text-group">
+    @Model?.Value("leftSectionTextPart03")
+    </div>
+    <img src="@leftSectionImage03"><img>
+    <div class="text-group">
+    @Model?.Value("leftSectionTextPart04")
+</div>
+
+       <!----section 04---->
+      <div class="tag-group">
+        <h4>Tags:</h4>
+        <div class="tags">
+        <div class="tag">
+            <span>@Model?.Value("leftTag01")</span>
         </div>
-
-        <div class="text-group">
-         @Model?.Value("leftSectionTextPart03")
+        <div class="tag">
+            <span>@Model?.Value("leftTag02")</span>
         </div>
-        <img src="@leftSectionImage03"><img>
-        <div class="text-group">
-          @Model?.Value("leftSectionTextPart04")
+        <div class="tag">
+            <span>@Model?.Value("leftTag03")</span>
         </div>
-        <div class="tag-group">
-          <h4>Tags:</h4>
-          <div class="tags">
-            <div class="tag">
-              <span>@Model?.Value("leftTag01")</span>
-            </div>
-            <div class="tag">
-              <span>@Model?.Value("leftTag02")</span>
-            </div>
-            <div class="tag">
-              <span>@Model?.Value("leftTag03")</span>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+    </div>
 
 
-
-
-
-<!----------  Right section  ---------->
-
-
-<!--- recent-projects section  -->
-
-
-
-<!--- Tags section  -->
+<!-----Tags section----->
       <div class="side-bar">
 
+
+
+ <!-----recent-projects----->
 <div class="recent-projects">
   <h3>Recent projects</h3>
   <div class="project-list">
@@ -182,18 +170,12 @@
         </div>
 
 
-         <!-------How can we help you?-------------------->
-         @await Html.PartialAsync("partials/static/we-help-you.cshtml")
+<!-------How can we help you?-------------------->
+@await Html.PartialAsync("partials/static/we-help-you.cshtml")
 
       </div>  
 
-
-
-
-
     </section>
-
-
 
 
 @*----------next-project-----------*@

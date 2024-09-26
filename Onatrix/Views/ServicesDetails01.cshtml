@@ -1,18 +1,18 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-    Layout = "mainLayout.cshtml";
-    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+    Layout                   = "mainLayout.cshtml";
+    ViewBag.Title            = Model?.Value("pageTitle") ?? null;
 
     var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
-    var aboutUsImage = Model?.Value<IPublishedContent>("aboutUsImage")?.Url() ?? "";
-    var mainContentImage1 = Model?.Value<IPublishedContent>("mainContentImage1")?.Url() ?? "";   
-    var mainContentImage2 = Model?.Value<IPublishedContent>("mainContentImage2")?.Url() ?? "";   
+    var aboutUsImage         = Model?.Value<IPublishedContent>("aboutUsImage")?.Url() ?? "";
+    var mainContentImage1    = Model?.Value<IPublishedContent>("mainContentImage1")?.Url() ?? "";   
+    var mainContentImage2    = Model?.Value<IPublishedContent>("mainContentImage2")?.Url() ?? "";   
 }
 
 <!-------banner-------------------->
-<section id="about" class="banner bg-gray">
-    <div class="background"> 
+<section class="banner bg-gray">
+    <div class="banner-background">
         <img src="@aboutBackgroundImage" alt="Background image">
         <div class="content">
             <h2>@Model?.Value("aboutHeadline")</h2>
@@ -29,8 +29,9 @@
 
 
 
-<!-------Right Section-------------------->
-<section id="ServicesDetails01">
+<!-------ServicesDetails01-------------------->
+<section class="ServicesDetails01">
+
     <div class="container">
         <div class="content">
 
@@ -61,6 +62,7 @@
             </div>  
         </div>  
     </div>
+
 </section>
 
 

@@ -3,22 +3,22 @@
 @{
 	Layout = "mainLayout.cshtml"; 
     ViewBag.Title = Model?.Value("pageTitle") ?? null;
-    var aboutBackgroundImage = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
 
-    var lOurProjectsImage01 = Model?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
-    var lOurProjectsImage02 = Model?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
-    var lOurProjectsImage03 = Model?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
-    var lOurProjectsImage04 = Model?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
+    var aboutBackgroundImage  = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
+
+    var lOurProjectsImage01   = Model?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
+    var lOurProjectsImage02   = Model?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
+    var lOurProjectsImage03   = Model?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
+    var lOurProjectsImage04   = Model?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
 
     var ProjectsDetailsLink01 = Model?.Value<string>("ProjectsDetailsLink01") ?? "#";
-        
 }
 
 
 
-@*----------Nour/Fix Name-----------*@
-<section id="about" class="banner bg-gray">
-    <div class="background"> 
+<!----------banner----------->
+<section class="banner bg-gray">
+    <div class="banner-background">
         <img src="@aboutBackgroundImage" alt="Backround image">
         <div class="content">
             <h2>@Model?.Value("aboutHeadline")</h2>
@@ -33,12 +33,10 @@
 
 
 
+<!----------Our Projects----------->
+<section class="Our-Projects container">
 
-
-@*----------Left Our Projects-----------*@
-<section id="main-content-section" class="page-section container">
-
-    <div class="side-content">
+    <div class="Our-Projects-content">
 
         <div class="project">
             <div class="project-img">
@@ -109,7 +107,10 @@
         </div>
     </div>
 
-    <div class="side-bar">
+
+        
+    <!---------tagHeadLine------------>
+    <div class="tagSide-bar">
         <h4>@Model?.Value("tagHeadLine")</h4>
         <div class="tags">
             <div class="tag"><span class="tag-text">@Model?.Value("tag01")</span></div>
@@ -122,12 +123,8 @@
             <div class="tag"><span class="tag-text">@Model?.Value("tag08")</span></div>
         </div>
 
-      
 
-
-
-
-    <!-------How can we help you?-------------------->
+    <!-------How can we help you?/Partial-------------------->
     @await Html.PartialAsync("partials/static/we-help-you.cshtml")
 
 
@@ -138,8 +135,8 @@
 
 
 
-@*----------pagnaitior/Partial-----------*@
+<!----------pagnaition/Partial----------->
 @await Html.PartialAsync("partials/static/pagnaition.cshtml")
 
-@*----------next-project/Partial-----------*@
+<!----------next-project/Partial----------->
 @await Html.PartialAsync("partials/static/next-project.cshtml")

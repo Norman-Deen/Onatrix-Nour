@@ -3,16 +3,16 @@
 @inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
 
 @{
-	Layout = "mainLayout.cshtml";
-    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+	Layout                     = "mainLayout.cshtml";
+    ViewBag.Title              = Model?.Value("pageTitle") ?? null;
     var contactBackgroundImage = Model?.Value<IPublishedContent>("contactBackgroundImage")?.Url() ?? "";
 }
 
 
 
-@*----------Banner-----------*@
-<section id="contact" class="banner contact-banner">
-    <div class="background"> 
+<!----------Banner----------->
+<section class="banner contact-banner">
+    <div class="banner-background">
         <img src="@contactBackgroundImage" alt="Backround image">
         <div class="content">
             <h2>@Model?.Value("contactHeadline")</h2>
@@ -26,30 +26,23 @@
 </section>
 
 
-
-@*----------Next-project/Partia-----------*@
+<!----------Next-project/Partia----------->
 @await Html.PartialAsync("partials/static/next-project.cshtml")
 
 
+<!----------Map----------->
+<section class="map">
 
-
-@*----------Map-----------*@
-<section id="map">
-    <div className="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2035.1615241898567!2d18.05131977757098!3d59.33025707461478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1725544158174!5m2!1ssv!2sse"
-            loading="lazy"
-            width="100%"
-            height="748"
-            style="border:0;"
-            allowFullScreen=""
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Maps"
-        ></iframe>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2035.1615241898567!2d18.05131977757098!3d59.33025707461478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1725544158174!5m2!1ssv!2sse"
+                loading="lazy"
+                title="Google Maps">
+        </iframe>
     </div>
 
 
-    @*----------REQUEST A CALL BACK-----------*@
+
+    <!----------REQUEST A CALL BACK----------->
     <div class="container">
         <div class="request-box bg-light">
             <div class="request-text">
@@ -68,13 +61,12 @@
             </form>
         </div>
     </div>
+
 </section>
 
 
 
-
-
-@*----------Partners/Partial-----------*@
+    <!----------Partners/Partial----------->
 @await Html.PartialAsync("partials/static/partners.cshtml")
 
 

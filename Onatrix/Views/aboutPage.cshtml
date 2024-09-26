@@ -21,9 +21,9 @@
 
 
 
-@*---------banner-----------*@
-<section id="about" class="banner bg-gray">
-    <div class="background"> 
+<!------------banner------------>
+<section class="banner bg-gray">
+    <div class="banner-background">
         <img src="@aboutBackgroundImage" alt="Backround image">
         <div class="content">
             <h2>@Model?.Value("aboutHeadline")</h2>
@@ -37,8 +37,8 @@
 </section>
 
 
-@*---------CEO-----------*@
-<section id="ceo">
+<!------------------CEO------------------->
+<section class="ceo">
     <div class="container">
         <div class="ceo-image">
             <div class="image">
@@ -55,8 +55,8 @@
 </section>
 
 
-@*--------REVIEWS---------*@
-<section id="reviews" class="bg-gray">
+<!------------REVIEWS------------>
+<section class="reviews bg-gray">
     <div class="container">
         <div class="content">
             <div class="reviews-text">
@@ -81,14 +81,16 @@
 </section>
 
 
-@*------------------CEO-------------------*@
-<section id="our-experts">
+<!------------our-experts---------------->
+<section class="our-experts">
+
     <div class="container">
         <div class="headline">
             <h6>@Model?.Value("ourExpertsHeadline")</h6>
             <h2>@Model?.Value("ourExpertsHeading")</h2>
         </div>
 
+        <!------------------Expert1------------------->
         <div class="content-expert">
             <div class="our-expert">
                 <div class="image">
@@ -120,7 +122,7 @@
 
 
 
-        @*------------------Expert-------------------*@
+        <!------------------Expert2------------------->
         <div class="content-more-expert">
             <div class="our-expert">
                 <div class="image">
@@ -163,5 +165,5 @@
 
 
 
-@*----------next-project/Partial-----------*@
+<!----------next-project/Partial----------->
 @await Html.PartialAsync("partials/static/next-project.cshtml")

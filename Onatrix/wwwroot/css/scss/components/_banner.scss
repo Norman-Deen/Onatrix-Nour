@@ -1,32 +1,32 @@
 ﻿.banner {
     position: relative;
 
-    img {
+    > img {
         width: 100%;
         height: 245px;
         object-fit: cover;
         object-position: center;
     }
 
-    .content {
+    > .banner-background > .content {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
 
-        .links {
+        > .links {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 1rem;
 
-            .home {
+            > .home {
                 text-decoration: none;
                 color: var(--color-primary);
             }
 
-            .activ {
+            > .activ {
                 text-decoration: none;
             }
         }

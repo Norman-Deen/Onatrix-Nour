@@ -1,204 +1,178 @@
-﻿main {
-    
-    #main-content-section {
-        display: flex;
-        gap: 1rem;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+﻿.projects-details {
+    display: flex;
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 
-        .side-content {
+    > .side-content {
+        display: flex;
+        flex-direction: column;
+        padding-right: 3rem;
+        border-right: 1px solid var(--color-border-gray);
+        gap: 2rem;
+        max-width: 70%;
+
+        > .date-group {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: var(--color-primary-light);
+
+            > i {
+                margin-right: 0.5rem;
+            }
+        }
+
+        > .img-group {
             display: flex;
             flex-direction: column;
-            padding-right: 3rem;
-            border-right: 1px solid var(--color-border-gray);
-            gap: 2rem;
-            max-width: 70%;
 
-            .date-group {
-                display: flex;
-                align-items: center;
-                font-size: 14px;
-                color: var(--color-primary-light);
-
-                i {
-                    margin-right: 0.5rem;
-                }
+            > p {
+                font-weight: 700;
             }
 
+            > img {
+            }
+        }
 
-            .img-group {
+        > .text-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            > h4 {
+                font-weight: 600;
+            }
+        }
+
+        //section 02
+        .recent-projects {
+           display:flex;
+            gap: 1rem;
+          
+            > img {}
+
+            > .text-group {}
+        }
+
+        > .tag-group {
+            display: flex;
+            gap: 0.5rem;
+
+            > .tags {
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 0.5rem;
 
+                > .tag {
+                    padding: 0.5rem 1rem;
+                    border-radius: 20px;
+                    background-color: var(--color-accent);
+                    font-size: 12px;
+                    color: var(--color-light);
+                    cursor: pointer;
+                    transition: background-color 0.2s;
 
-                p {
-                    font-weight: 700;
-                }
-
-                img {
+                    &:hover {
+                        background-color: var(--color-primary);
+                    }
                 }
             }
+        }
+    }
 
-            .text-group {
+    // Right section (side-bar)
+    .side-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 30%;
+
+        > h4 {
+            font-size: 18px;
+            font-weight: 600;
+            // margin-bottom: 1rem;
+        }
+        // Recent projects
+        .recent-projects {
+
+            > h3 {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                color: var(--color-primary);
+                margin-left: 1rem;
+            }
+
+            > .project-list {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-
-                h4 {
-                    font-weight: 600;
-                }
             }
 
-            .flex-group {
-                display: grid;
-                grid-template-columns: 1.5fr 2fr; /* الصورة تكون في العمود الأول والنص في العمود الثاني */
-                gap: 2rem;
-                align-items: start; /* ضمان أن الصورة والنص يبدأان من نفس المستوى العلوي */
-
-                img {
-                    grid-column: 1; /* الصورة في العمود الأول */
-                    display: block;
-                    width: 100%;
-                    height: auto;
-                    object-fit: cover;
-                    border-radius: 4px;
-                }
-
-                .text-group {
-                    grid-column: 2; /* النص في العمود الثاني */
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start; /* ضمان أن النص يبدأ من الأعلى */
-                }
-            }
-
-
-
-
-            .tag-group {
+            .project-item {
                 display: flex;
-                // flex-direction: column;
-                gap: 0.5rem;
+                gap: 1rem;
+                padding: 1rem;
+                border-bottom: 1px solid #ebebeb;
 
-                h4 {
-                    font-size: 16px;
-                    font-weight: 600;
-                    margin-bottom: 0.5rem;
+                > .project-img {
+                    width: 130px;
+                    height: 80px;
+                    overflow: hidden;
+
+                    > img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
 
-                .tags {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 0.5rem;
+                .project-info {
+                    > h4 {
+                        max-width: 10rem;
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin: 0 0 0.5rem 0;
+                        color: var(--color-primary);
+                    }
 
-                    .tag {
-                        padding: 0.5rem 1rem;
-                        border-radius: 20px;
-                        background-color: var(--color-accent);
+                    > p {
                         font-size: 12px;
-                        color: var(--color-light);
-                        cursor: pointer;
-                        transition: background-color 0.2s;
+                        color: #9c9ea6;
 
-                        &:hover {
-                            background-color: var(--color-primary);
+                        > i {
+                            margin-right: 0.5rem;
                         }
                     }
                 }
             }
         }
-        // Right section (side-bar)
-        .side-bar {
+        //tags
+        .tags {
             display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            width: 30%;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            max-width: 15rem;
 
-            h4 {
-                font-size: 18px;
-                font-weight: 600;
-                // margin-bottom: 1rem;
-            }
+            > .tag {
+                padding: 0.7rem 1rem;
+                border-radius: 20px;
+                border: 1px solid var(--color-border-gray);
+                font-size: 12px;
+                cursor: pointer;
+                transition: background-color 0.2s, color 0.2s;
 
-            .tags {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                max-width: 15rem;
+                > .tag-text {
+                    color: var(--color-primary-dark); /* اللون الافتراضي للنص */
+                    transition: color 0.2s;
+                }
 
-                .tag {
-                    padding: 0.7rem 1rem;
-                    border-radius: 20px;
-                    border: 1px solid var(--color-border-gray);
-                    font-size: 12px;
-                    cursor: pointer;
-                    transition: background-color 0.2s, color 0.2s;
+                &:hover {
+                    background-color: var(--color-primary); /* تأثير الـ hover على العنصر */
 
                     .tag-text {
-                        color: var(--color-primary-dark); /* اللون الافتراضي للنص */
-                        transition: color 0.2s;
-                    }
-
-                    &:hover {
-                        background-color: var(--color-primary); /* تأثير الـ hover على العنصر */
-
-                        .tag-text {
-                            color: var(--color-light); /* تغيير لون النص عند التحويم */
-                        }
-                    }
-                }
-            }
-            // Recent projects
-            .recent-projects {
-                h3 {
-                    font-size: 18px;
-                    font-weight: 600;
-                    margin-bottom: 1rem;
-                    color: var(--color-primary);
-                    margin-left: 1rem;
-                }
-
-                .project-list {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                }
-
-                .project-item {
-                    display: flex;
-                    gap: 1rem;
-                    padding: 1rem;
-                    border-bottom: 1px solid #ebebeb;
-
-                    .project-img {
-                        width: 130px;
-                        height: 80px;
-                        overflow: hidden;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-
-                    .project-info {
-                        h4 {
-                            max-width: 10rem;
-                            font-size: 14px;
-                            font-weight: 600;
-                            margin: 0 0 0.5rem 0;
-                            color: var(--color-primary);
-                        }
-
-                        p {
-                            font-size: 12px;
-                            color: #9c9ea6;
-
-                            i {
-                                margin-right: 0.5rem;
-                            }
-                        }
+                        color: var(--color-light); /* تغيير لون النص عند التحويم */
                     }
                 }
             }

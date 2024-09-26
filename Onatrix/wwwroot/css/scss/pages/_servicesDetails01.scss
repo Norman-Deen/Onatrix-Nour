@@ -1,44 +1,48 @@
-﻿#ServicesDetails01 {
-    .container {
+﻿
+//ServicesDetails01
+.ServicesDetails01 {
+
+   > .container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        .content {
+       > .content {
             margin-top: 5rem;
             display: flex;
             justify-content: center;
             align-items: start;
             gap: 3rem;
 
-            .about-us {
+           > .about-us {
                 flex: 1;
                 margin-bottom: 2rem;
 
-                .image {
-                    img {
+               > .image {
+
+                   > img {
                         width: 100%;
                         height: auto;
                     }
                 }
 
-                p {
+              > p {
                     margin-bottom: 1rem;
                     margin-top: 1rem;
                     line-height: 1.5;
                 }
 
-                .bg-primary {
+               > .bg-primary {
                     position: relative;
                     z-index: 1;
                     padding: 2rem;
 
-                    h4 {
+                  >  h4 {
                         color: var(--color-secondary);
                     }
 
-                    .image {
+                   > .image {
                         width: 50%;
                         height: auto;
                         position: absolute;
@@ -54,30 +58,34 @@
                 border-left: 1px solid var(--color-gray);
                 padding-left: 3rem;
 
-                .image {
-                    img {
-                        width: 100%;
-                        height: auto;
+              > .image {
+
+               > img {
+                    width: 100%;
+                    height: auto;
                     }
                 }
 
-                h4 {
+             > h4 {
                     margin-top: 2rem;
                 }
 
-                ul {
-                    li {
-                        line-height: 2;
+             > ul {
+
+               > li {
+                     line-height: 2;
                     }
                 }
 
-                p {
+              > p {
                     line-height: 2;
                 }
             }
         }
     }
 }
+
+
 
 // Form
 .ServicesDetails01-form-question {
@@ -88,43 +96,43 @@
     margin: 0 auto;
     max-width: 65%;
 
-    h4 {
+  > h4 {
         grid-column: 1 / -1;
         font-size: 1.5rem;
         font-weight: 700;
     }
 
-    input,
-    textarea {
-        width: 100%;
-        padding: 0.85rem;
-        border: 1.5px solid var(--color-border-gray);
-        border-radius: 4px;
-        font-size: 12pt;
-        font-style: italic;
-        transition: border-color 0.3s ease;
+  > input,
+  > textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1.5px solid var(--color-border-gray);
+    border-radius: 4px;
+    font-size: 12pt;
+    font-style: italic;
+    transition: border-color 0.3s ease;
 
-        &::placeholder {
-            color: var(--color-border-gray);
-        }
-
-        &:focus,
-        &:hover {
-            border-color: var(--color-border-dark);
-        }
+    &::placeholder {
+        color: var(--color-border-gray);
     }
 
-    textarea {
+    &:focus,
+    &:hover {
+        border-color: var(--color-border-dark);
+    }
+  }
+
+   > textarea {
         grid-column: 1 / -1;
         height: 150px;
         resize: none;
     }
 
-    input[type="email"] {
+   > input[type="email"] {
         grid-column: 2;
     }
 
-    input[type="text"]:nth-child(3) {
+   > input[type="text"]:nth-child(3) {
         grid-column: 1 / -1;
     }
 }
