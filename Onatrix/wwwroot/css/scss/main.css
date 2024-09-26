@@ -1268,200 +1268,49 @@ h6 {
   color: var(--color-secondary);
 }
 
-#hero-slider .background {
+.hero-section .hero-background {
   display: block;
   height: 35rem;
 }
-#hero-slider .container {
+.hero-section .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#hero-slider .container .hero-content {
+.hero-section .container .hero-content {
   width: 50%;
 }
-#hero-slider .container .hero-content .headline {
+.hero-section .container .hero-content .headline {
   font-weight: 700;
   margin-top: 7rem;
   line-height: 110%;
 }
-#hero-slider .container .hero-content .ingress {
+.hero-section .container .hero-content .ingress {
   font-size: large;
   margin-top: 1.5rem;
 }
-#hero-slider .container .hero-content div .btn {
+.hero-section .container .hero-content div .btn {
   margin-bottom: 5rem;
   font-weight: 750;
 }
 
-#about-us {
+.about-us {
   position: relative;
   margin: 7rem 7rem;
 }
-#about-us .container {
+.about-us .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#about-us .container .content {
+.about-us .container .content {
   width: 50%;
 }
-#about-us .container .content .quote {
+.about-us .container .content .quote {
   font-size: 15pt;
   font-style: italic;
   font-weight: 300;
   margin-bottom: 2rem;
-}
-#about-us .container .call-box {
-  position: absolute;
-  top: -12rem;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 10px 10px rgba(163, 163, 163, 0.25);
-  width: 500px;
-}
-#about-us .container .call-box .box-header {
-  display: flex;
-  align-items: center;
-  padding: 1.5rem 1.5rem;
-  background-color: var(--color-primary);
-}
-#about-us .container .call-box .box-header h3 {
-  color: var(--color-accent);
-  font-size: 25pt;
-}
-#about-us .container .call-box p {
-  font-size: 10pt;
-  font-weight: 500;
-  font-style: italic;
-}
-#about-us .container .call-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  padding: 2rem;
-}
-#about-us .container .call-box form input[type=text],
-#about-us .container .call-box form input[type=email],
-#about-us .container .call-box form input[type=number] {
-  width: 100%;
-  padding: 20px;
-  border: 1.5px solid var(--color-border-gray);
-  border-radius: 4px;
-  font-size: 11pt;
-  font-style: italic;
-  transition: border-color 0.3s;
-}
-#about-us .container .call-box form input[type=text]:focus, #about-us .container .call-box form input[type=text]:hover,
-#about-us .container .call-box form input[type=email]:focus,
-#about-us .container .call-box form input[type=email]:hover,
-#about-us .container .call-box form input[type=number]:focus,
-#about-us .container .call-box form input[type=number]:hover {
-  border-color: var(--color-border-dark);
-}
-#about-us .container .call-box form input[type=text]::placeholder,
-#about-us .container .call-box form input[type=email]::placeholder,
-#about-us .container .call-box form input[type=number]::placeholder {
-  color: var(--color-border-gray);
-}
-#about-us .container .call-box form .select-wrapper {
-  position: relative;
-  width: 100%;
-}
-#about-us .container .call-box form .select-wrapper .select {
-  position: relative;
-  border: 1.5px solid var(--color-border-gray);
-  border-radius: 4px;
-  padding: 0.3rem 0;
-  cursor: pointer;
-  transition: border-color 0.3s;
-}
-#about-us .container .call-box form .select-wrapper .select:hover {
-  border-color: var(--color-border-dark);
-}
-#about-us .container .call-box form .select-wrapper .select .select_trigger {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 22px;
-  font-size: 9pt;
-  font-weight: 300;
-  height: 40px;
-  line-height: 40px;
-  color: #3b3b3b;
-}
-#about-us .container .call-box form .select-wrapper .select .select_trigger span {
-  font-weight: 400;
-  font-size: 9pt;
-}
-#about-us .container .call-box form .select-wrapper .select .select_trigger .arrow {
-  width: 15px;
-  height: 15px;
-  transform: rotate(180deg);
-}
-#about-us .container .call-box form .select-wrapper .select .select_trigger .arrow::before, #about-us .container .call-box form .select-wrapper .select .select_trigger .arrow::after {
-  content: "";
-  position: absolute;
-  bottom: 3px;
-  width: 0.12rem;
-  height: 9px;
-  background-color: var(--clr-green);
-  transition: all 0.2s;
-}
-#about-us .container .call-box form .select-wrapper .select .select_trigger .arrow::before {
-  left: 5px;
-  transform: rotate(45deg);
-}
-#about-us .container .call-box form .select-wrapper .select .select_trigger .arrow::after {
-  right: 2px;
-  transform: rotate(-45deg);
-}
-#about-us .container .call-box form .select-wrapper .select .options {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border: 1.5px solid var(--color-border-gray);
-  border-top: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 2;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-#about-us .container .call-box form .select-wrapper .select .options .option {
-  padding: 0 22px;
-  font-size: 9pt;
-  font-weight: 300;
-  color: #3b3b3b;
-  line-height: 40px;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.2s;
-}
-#about-us .container .call-box form .select-wrapper .select .options .option:hover {
-  background-color: #b2b2b2;
-}
-#about-us .container .call-box form .select-wrapper .select .options .option.selected {
-  background-color: var(--clr-green);
-  color: #fff;
-}
-#about-us .container .call-box form .select-wrapper .select.open .options {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-#about-us .container .call-box form .select-wrapper .select.open .option {
-  opacity: 1;
-  transform: translateY(0);
-}
-#about-us .container .call-box form .select-wrapper .select.open .arrow::before {
-  transform: rotate(-45deg);
-}
-#about-us .container .call-box form .select-wrapper .select.open .arrow::after {
-  transform: rotate(45deg);
 }
 
 #we-are {
@@ -2627,4 +2476,156 @@ main #main-content-section .side-bar .recent-projects .project-item .project-inf
 }
 #our-services .bg-gray .container .solution a .solution-item p {
   padding: 2rem;
+}
+
+.call-box {
+  position: absolute;
+  top: -12rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px 10px rgba(163, 163, 163, 0.25);
+  width: 500px;
+}
+.call-box .box-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  background-color: var(--color-primary);
+}
+.call-box .box-header h3 {
+  color: var(--color-accent);
+  font-size: 25pt;
+}
+.call-box p {
+  font-size: 10pt;
+  font-weight: 500;
+  font-style: italic;
+}
+.call-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem;
+}
+.call-box form input[type=text],
+.call-box form input[type=email],
+.call-box form input[type=number] {
+  width: 100%;
+  padding: 20px;
+  border: 1.5px solid var(--color-border-gray);
+  border-radius: 4px;
+  font-size: 11pt;
+  font-style: italic;
+  transition: border-color 0.3s;
+}
+.call-box form input[type=text]:focus, .call-box form input[type=text]:hover,
+.call-box form input[type=email]:focus,
+.call-box form input[type=email]:hover,
+.call-box form input[type=number]:focus,
+.call-box form input[type=number]:hover {
+  border-color: var(--color-border-dark);
+}
+.call-box form input[type=text]::placeholder,
+.call-box form input[type=email]::placeholder,
+.call-box form input[type=number]::placeholder {
+  color: var(--color-border-gray);
+}
+.call-box form .select-wrapper {
+  position: relative;
+  width: 100%;
+}
+.call-box form .select-wrapper .select {
+  position: relative;
+  border: 1.5px solid var(--color-border-gray);
+  border-radius: 4px;
+  padding: 0.3rem 0;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+.call-box form .select-wrapper .select:hover {
+  border-color: var(--color-border-dark);
+}
+.call-box form .select-wrapper .select .select_trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  font-size: 9pt;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+  color: #3b3b3b;
+}
+.call-box form .select-wrapper .select .select_trigger span {
+  font-weight: 400;
+  font-size: 9pt;
+}
+.call-box form .select-wrapper .select .select_trigger .arrow {
+  width: 15px;
+  height: 15px;
+  transform: rotate(180deg);
+}
+.call-box form .select-wrapper .select .select_trigger .arrow::before, .call-box form .select-wrapper .select .select_trigger .arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  width: 0.12rem;
+  height: 9px;
+  background-color: var(--clr-green);
+  transition: all 0.2s;
+}
+.call-box form .select-wrapper .select .select_trigger .arrow::before {
+  left: 5px;
+  transform: rotate(45deg);
+}
+.call-box form .select-wrapper .select .select_trigger .arrow::after {
+  right: 2px;
+  transform: rotate(-45deg);
+}
+.call-box form .select-wrapper .select .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1.5px solid var(--color-border-gray);
+  border-top: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.call-box form .select-wrapper .select .options .option {
+  padding: 0 22px;
+  font-size: 9pt;
+  font-weight: 300;
+  color: #3b3b3b;
+  line-height: 40px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s;
+}
+.call-box form .select-wrapper .select .options .option:hover {
+  background-color: #b2b2b2;
+}
+.call-box form .select-wrapper .select .options .option.selected {
+  background-color: var(--clr-green);
+  color: #fff;
+}
+.call-box form .select-wrapper .select.open .options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.call-box form .select-wrapper .select.open .option {
+  opacity: 1;
+  transform: translateY(0);
+}
+.call-box form .select-wrapper .select.open .arrow::before {
+  transform: rotate(-45deg);
+}
+.call-box form .select-wrapper .select.open .arrow::after {
+  transform: rotate(45deg);
 }

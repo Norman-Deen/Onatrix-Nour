@@ -14,12 +14,12 @@
     var weAreImage2           = Model?.Value<IPublishedContent>("weAreImage2")?.Url() ?? "";
     var backgroundImage       = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
     var signatureImage        = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
-
 }
 
-<!----------Hero---------->
-<section id="hero-slider" class="hero">
-    <div class="background" style="background-image:url(@backgroundImage);background-size: cover; background-position: 60%">
+
+<!----------Hero-section---------->
+<section  class="hero-section">
+    <div class="hero-background" style="background-image:url(@backgroundImage);background-size: cover; background-position: 60%">
         <div class="container">
             <div class="hero-content">
                 <h1 class="headline">@Model?.Value("heroHeadline")</h1>
@@ -28,13 +28,13 @@
                     <a href="@Model?.Value("heroButtonUrl")" class="btn btn-primary">@Model?.Value("heroButtonText")</a>
                 </div>
             </div>
-            <div></div>
         </div>
     </div>
 </section>
 
+
 <!----------about-us---------->
-<section id="about-us" class="about-us">
+<section class="about-us">
     <div class="container">
         <div class="content">
             <div class="headline">
@@ -60,6 +60,7 @@
         
     </div>
 </section>
+
 
 
 @*----------our-services/Partial-----------*@
