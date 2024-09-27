@@ -1,8 +1,8 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-    Layout = "mainLayout.cshtml";
-    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+    Layout                    = "mainLayout.cshtml";
+    ViewBag.Title             = Model?.Value("pageTitle") ?? null;
 
     var projects01Image       = Model?.Value<IPublishedContent>("projects01Image")?.Url() ?? "";
     var projects02Image       = Model?.Value<IPublishedContent>("projects02Image")?.Url() ?? "";
@@ -67,7 +67,7 @@
 
 
 <!----------our-services/Partial----------->
-@await Html.PartialAsync("partials/static/our-services.cshtml")
+@await Html.PartialAsync("partials/static/Solutions.cshtml")
 
 
 <!----------clients----------->
@@ -174,7 +174,7 @@
 </section>
 
 
-@*----------partners/Partial-----------*@
+<!----------partners/Partial----------->
 @await Html.PartialAsync("partials/static/partners.cshtml")
 
 
