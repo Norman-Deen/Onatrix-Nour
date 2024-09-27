@@ -3,59 +3,55 @@
 @inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
 
 @{
-    var rootContents       = UmbracoHelper.ContentAtRoot();
-    var settings           = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    var rootContents      = UmbracoHelper.ContentAtRoot();
+    var settings          = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
 
-    var nextProjectTextHeadline = settings?.Value<string>("nextProjectTextHeadline") ?? "";
-    var officeLocation          = settings?.Value<string>("officeLocation") ?? "";
-    var officePhoneNumber       = settings?.Value<string>("officePhoneNumber") ?? "";
-    var officeEmailAddress      = settings?.Value<string>("officeEmailAddress") ?? "";
+    var npImageHuman      = settings?.Value<IPublishedContent>("npImageHuman")?.Url() ?? "";
+    var npImageBackground = settings?.Value<IPublishedContent>("npImageBackground")?.Url() ?? "";
+    var npImageDot        = settings?.Value<IPublishedContent>("npImageDot")?.Url() ?? "";
 
-    var nextProjectTextLocation = settings?.Value<string>("nextProjectTextLocation") ?? "";
-    var nextProjectTextPhone    = settings?.Value<string>("nextProjectTextPhone") ?? "";
-    var nextProjectTextEmail    = settings?.Value<string>("nextProjectTextEmail") ?? "";
-
-    var nextProjectImageHuman      = settings?.Value<IPublishedContent>("nextProjectImageHuman")?.Url() ?? "";
-    var nextProjectImageBackground = settings?.Value<IPublishedContent>("nextProjectImageBackground")?.Url() ?? "";
-    var nextProjectImageDot        = settings?.Value<IPublishedContent>("nextProjectImageDot")?.Url() ?? "";
-    
-    var currentPageUrl = Model.Url();
-    var isContactPage  = currentPageUrl.Contains("/contact");
+    var npTextHeadline    = settings?.Value<string>("npTextHeadline") ?? "";
+    var npTextLocation    = settings?.Value<string>("npTextLocation") ?? "";
+    var npTextPhone       = settings?.Value<string>("npTextPhone") ?? "";
+    var npTextEmail       = settings?.Value<string>("npTextEmail") ?? "";
+    var npPLocation       = settings?.Value<string>("npPLocation") ?? "";
+    var npPPhone          = settings?.Value<string>("npPPhone") ?? "";
+    var npPEmail          = settings?.Value<string>("npPEmail") ?? "";
 }
 
 
 
 
 
-@*-----------next-project----------*@
+<!-----------next-project---------->
 <section id="next-project" class="bg-gray")">
     <div class="container">
 
         <div class="images">
             <div class="image-human">
-                <img src="@nextProjectImageHuman" alt="">
+                <img src="@npImageHuman" alt="">
             </div>
 
             <div class="image-background">
-                <img src="@nextProjectImageBackground" alt="">
+                <img src="@npImageBackground" alt="">
             </div>
 
             <div class="image-dot">
-                <img src="@nextProjectImageDot" alt="">
+                <img src="@npImageDot" alt="">
             </div>
         </div>
 
         <div class="text">
-            <h2>@nextProjectTextHeadline</h2>
+            <h2>@npTextHeadline</h2>
 
-            <h5><i class="fas fa-map-marker-alt"></i>@nextProjectTextLocation</h5>
-            <p>@officeLocation</p>
+            <h5><i class="fas fa-map-marker-alt"></i>@npTextLocation</h5>
+            <p>@npPLocation</p>
             
-            <h5><i class="fas fa-phone"></i>@nextProjectTextPhone</h5>
-            <p>@officePhoneNumber</p>
+            <h5><i class="fas fa-phone"></i>@npTextPhone</h5>
+            <p>@npPPhone</p>
             
-            <h5><i class="fas fa-envelope"></i>@nextProjectTextEmail</h5>
-            <p>@officeEmailAddress</p>
+            <h5><i class="fas fa-envelope"></i>@npTextEmail</h5>
+            <p>@npPEmail</p>
         </div>
     </div>
 </section>
