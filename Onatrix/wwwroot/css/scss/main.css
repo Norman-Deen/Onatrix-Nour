@@ -1313,37 +1313,37 @@ h6 {
   margin-bottom: 2rem;
 }
 
-.we-are {
+.clients {
   margin-top: 8rem;
 }
-.we-are .container {
+.clients > .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
 }
-.we-are .container .content {
+.clients > .container > .content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 50%;
-  position: relative; /* مهم لتفعيل z-index */
-  z-index: 1; /* وضعها فوق الصورة */
+  position: relative;
+  z-index: 1;
   overflow: hidden;
 }
-.we-are .container .content h2 {
+.clients > .container > .content > h2 {
   margin: 0;
 }
-.we-are .container .content .h2 {
+.clients > .container > .content > .clients-h2 {
   color: var(--color-secondary);
 }
-.we-are .container .content p {
+.clients > .container > .content > p {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.we-are .container .we-are-image1 {
+.clients > .container .clients-image-1 {
   width: 100%;
   height: auto;
   margin-top: -6rem;
@@ -1351,27 +1351,27 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0; /* الصورة ستكون تحت المحتوى */
+  z-index: 0;
   opacity: 0.35;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.we-are .container .we-are-image1 img {
+.clients > .container .clients-image-1 > img {
   width: 77%;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.we-are .container .we-are-image1:hover {
+.clients > .container .clients-image-1:hover {
   opacity: 1;
 }
-.we-are .container .we-are-image1:hover img {
+.clients > .container .clients-image-1:hover > img {
   transform: scale(0.9);
 }
-.we-are .container .we-are-image2 {
+.clients > .container .clients-image-2 {
   width: 100%;
   height: auto;
   margin-top: 5rem;
   z-index: 1;
 }
-.we-are .container .we-are-image2 img {
+.clients > .container .clients-image-2 > img {
   width: 100%;
   height: auto;
 }

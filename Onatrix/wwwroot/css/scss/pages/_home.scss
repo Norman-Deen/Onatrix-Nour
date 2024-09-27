@@ -63,77 +63,73 @@
 
 
 //We-are
-.we-are {
+.clients {
     margin-top: 8rem;
 
-    .container {
+    > .container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         position: relative;
 
-
-        .content {
+        > .content {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             width: 50%;
-            position: relative; /* مهم لتفعيل z-index */
-            z-index: 1; /* وضعها فوق الصورة */
+            position: relative; 
+            z-index: 1; 
             overflow: hidden;
 
-            h2 {
+            > h2 {
                 margin: 0;
             }
 
-            .h2 {
+            > .clients-h2 {
                 color: var(--color-secondary);
             }
 
-            p {
+            > p {
                 margin-top: 1rem;
                 margin-bottom: 1rem;
             }
         }
 
-        .we-are-image1 {
+        .clients-image-1 {
             width: 100%;
             height: auto;
             margin-top: -6rem;
-            margin-left:33rem;
+            margin-left: 33rem;
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 0; /* الصورة ستكون تحت المحتوى */
+            z-index: 0; 
             opacity: 0.35;
             transition: transform 0.5s ease, opacity 0.5s ease;
 
-
-
-            img {
+           > img {
                 width: 77%;
                 transition: transform 0.5s ease, opacity 0.5s ease;
-               
             }
 
             &:hover {
                 opacity: 1;
 
-                img {
+               > img {
                     transform: scale(0.9);
                 }
             }
         }
 
-        .we-are-image2 {
+        .clients-image-2 {
             width: 100%;
             height: auto;
             margin-top: 5rem;
             z-index: 1;
 
-            img {
+           > img {
                 width: 100%;
                 height: auto;
             }
