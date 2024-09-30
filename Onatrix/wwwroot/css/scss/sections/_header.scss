@@ -2,30 +2,30 @@
 //header
 .header {
 
-    .background-primary {
+  >  .background-primary {
         background-color: var(--color-primary);
 
-        .container {
+      >  .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 40px;
 
-            .header-text {
+         >   .header-text {
                 display: block;
 
-                p {
+              >  p {
                     padding: 0;
                     color: var(--color-light);
                     font-size: 0.8rem;
                 }
             }
 
-            .header-icons {
+          >  .header-icons {
                 display: flex;
                 align-items: center;
 
-                a {
+             >   a {
                     padding: 0.7rem;
                     border-left: 1px solid;
                     border-right: 1px solid;
@@ -33,7 +33,7 @@
                     cursor: pointer;
                 }
 
-                i {
+              i {
                     font-size: 14px;
                     color: var(--color-light);
                     transition: transform 0.2s ease, opacity 0.2s ease;

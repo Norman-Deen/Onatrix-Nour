@@ -82,35 +82,3 @@
         @include link-colors($link-colors, $hover-colors);
     }
 }
-
-// @mixin theme-buttons($bg-color, $btn-dark-color, $btn-primary-color, $btn-secondary-color, $btn-accent-color, $btn-gray-color, $btn-light-color, $btn-menu-colors){
-//     .btn-dark {
-//         @include button-colors($btn-dark-color...);
-//     }
-
-//     .btn-primary {
-//         @include button-colors($btn-primary-color...);
-//     }
-
-//     .btn-secondary {
-//         @include button-colors($btn-secondary-color...);
-//     }
-
-//     .btn-accent {
-//         @include button-colors($btn-accent-color...);
-//     }
-
-//     .btn-gray {
-//         @include button-colors($btn-gray-color...);
-//     }
-
-//     .btn-light {
-//         @include button-colors($btn-light-color...);
-//     }
-
-//     .btn-menu {
-//         @include button-colors($btn-menu-colors...);
-//     }
-
-    
-// }

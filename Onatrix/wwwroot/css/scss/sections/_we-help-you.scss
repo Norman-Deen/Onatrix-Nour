@@ -2,7 +2,7 @@
     background-color: var(--color-primary);
     padding: 1rem;
     border-radius: 4px;
-    position: relative; /* لضبط الصورة بشكل نسبي */
+    position: relative;
     max-width: 20rem;
 
     .we-help-you-Headline {
@@ -54,10 +54,9 @@
     }
 
     .we-help-you-image {
-        position: absolute; /* لجعل الصورة تتحرك داخل الحاوية */
+        position: absolute;
         bottom: 0;
         right: 0;
         width: 46%;
-       // opacity: 0.1; /* لجعل الصورة شفافة قليلاً كما هو في المثال السابق */
     }
 }

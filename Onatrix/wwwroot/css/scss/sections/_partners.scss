@@ -1,20 +1,20 @@
 ﻿.partners {
     padding: 4rem 0;
     background-color: var(--color-light);
-    ;
+    
 
     .container {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        flex-wrap: wrap; // يسمح بالتفاف العناصر إذا كانت الشاشة ضيقة
+        flex-wrap: wrap; 
 
         .partner {
-            max-width: 150px; // تخصيص العرض الأقصى لكل شريك
+            max-width: 150px; 
             margin: 1rem;
 
-            img {
-                max-width: 100%; // استخدام max-width لضمان أن الصورة لا تتجاوز حجم الحاوية
+         > img {
+                max-width: 100%;
                 height: auto;
                 display: block;
             }

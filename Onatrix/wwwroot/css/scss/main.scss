@@ -1,4 +1,4 @@
-﻿// put  mixins alwayes att top
+﻿// put mixins always at top
 
 
 @import "./mixins/mixins-media.scss";
@@ -7,7 +7,6 @@
 @import "colors/mixins/_mixins-colors.scss";
 
 @import "./misc/base.scss";
-@import "./components/wrapper.scss";
 @import "./components/container.scss";
 @import "./components/links.scss";
 @import "./components/buttons.scss";

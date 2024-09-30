@@ -34,16 +34,6 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-rows: auto, 1fr auto;
-}
-@media (min-width: 1400px) {
-  .wrapper {
-    grid-template-rows: auto auto 1fr auto;
-  }
-}
-
 .container {
   position: relative;
   width: 100%;
@@ -218,25 +208,6 @@ h6 {
   --color-border-light-transparent: rgba(255, 255, 255, 0.95);
 }
 
-:root.dark-theme {
-  --color-dark: #e0e0e0;
-  --color-primary: #a3b3af;
-  --color-primary-light: #c1ccc9;
-  --color-primary-dark:#6f7976;
-  --color-secondary: #3c2f26;
-  --color-accent: #1a1a1a;
-  --color-gray: #2b2b2b;
-  --color-light: #171717;
-  --color-border-dark: #cccccc;
-  --color-border-dark-transparent: rgba(204, 204, 204, 0.1);
-  --color-border-primary: #b6b6b6;
-  --color-border-secondary: #4239e2;
-  --color-border-accent: #2a2925;
-  --color-border-gray: #474747;
-  --color-border-light: #2c2c2c;
-  --color-border-light-transparent: rgba(23, 23, 23, 0.95);
-}
-
 body {
   color: var(--color-default);
 }
@@ -247,6 +218,11 @@ span {
 
 .bg-secondary span {
   color: var(--color-primary);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 a {
@@ -1871,6 +1847,7 @@ h6 {
   margin-top: 3rem;
   display: flex;
   gap: 3rem;
+  margin-bottom: 4rem;
 }
 .Our-Projects .Our-Projects-content {
   display: flex;
@@ -2132,40 +2109,40 @@ h6 {
   color: var(--color-light); /* تغيير لون النص عند التحويم */
 }
 
-.header .background-primary {
+.header > .background-primary {
   background-color: var(--color-primary);
 }
-.header .background-primary .container {
+.header > .background-primary > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
 }
-.header .background-primary .container .header-text {
+.header > .background-primary > .container > .header-text {
   display: block;
 }
-.header .background-primary .container .header-text p {
+.header > .background-primary > .container > .header-text > p {
   padding: 0;
   color: var(--color-light);
   font-size: 0.8rem;
 }
-.header .background-primary .container .header-icons {
+.header > .background-primary > .container > .header-icons {
   display: flex;
   align-items: center;
 }
-.header .background-primary .container .header-icons a {
+.header > .background-primary > .container > .header-icons > a {
   padding: 0.7rem;
   border-left: 1px solid;
   border-right: 1px solid;
   border-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
-.header .background-primary .container .header-icons i {
+.header > .background-primary > .container > .header-icons i {
   font-size: 14px;
   color: var(--color-light);
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
-.header .background-primary .container .header-icons i:hover {
+.header > .background-primary > .container > .header-icons i:hover {
   opacity: 0.3;
   transform: scale(1.5);
 }
@@ -2201,17 +2178,17 @@ h6 {
   color: var(--color-primary);
 }
 
-.footer .container {
+.footer > .container {
   display: flex;
   justify-content: start;
   align-items: center;
   padding-top: 1rem;
 }
-.footer .container .rights {
+.footer > .container > .rights {
   display: block;
   color: var(--color-primary);
 }
-.footer .container .left {
+.footer > .container > .left {
   margin-left: 0.5rem;
   color: var(--color-light);
 }
@@ -2265,7 +2242,7 @@ h6 {
   background-color: var(--color-primary);
   padding: 1rem;
   border-radius: 4px;
-  position: relative; /* لضبط الصورة بشكل نسبي */
+  position: relative;
   max-width: 20rem;
 }
 .we-help-you-box .we-help-you-Headline {
@@ -2309,16 +2286,16 @@ h6 {
   font-size: 1.2rem;
 }
 .we-help-you-box .we-help-you-image {
-  position: absolute; /* لجعل الصورة تتحرك داخل الحاوية */
+  position: absolute;
   bottom: 0;
   right: 0;
   width: 46%;
 }
 
-#next-project {
+.next-project {
   margin-top: 5rem;
 }
-#next-project .container {
+.next-project > .container {
   position: relative;
   padding-top: 3rem;
   display: flex;
@@ -2327,11 +2304,11 @@ h6 {
   height: 600px;
   gap: 10rem;
 }
-#next-project .container .images {
+.next-project > .container > .images {
   display: block;
   flex: 1;
 }
-#next-project .container .images .image-human {
+.next-project > .container > .images > .image-human {
   position: absolute;
   bottom: 0;
   left: 100px;
@@ -2339,11 +2316,11 @@ h6 {
   width: 400px;
   height: auto;
 }
-#next-project .container .images .image-human img {
+.next-project > .container > .images > .image-human > img {
   width: 100%;
   height: auto;
 }
-#next-project .container .images .image-background {
+.next-project > .container > .images > .image-background {
   position: absolute;
   bottom: 0;
   left: 100px;
@@ -2351,11 +2328,11 @@ h6 {
   width: 500px;
   height: auto;
 }
-#next-project .container .images .image-background img {
+.next-project > .container > .images > .image-background > img {
   width: 100%;
   height: auto;
 }
-#next-project .container .images .image-dot {
+.next-project > .container > .images > .image-dot {
   position: absolute;
   bottom: 0;
   left: 360px;
@@ -2363,23 +2340,29 @@ h6 {
   width: 180px;
   height: auto;
 }
-#next-project .container .images .image-dot img {
+.next-project > .container > .images > .image-dot > img {
   width: 100%;
   height: auto;
 }
-#next-project .container .text {
+.next-project > .container > .text {
   flex: 1;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
-#next-project .container .text h2 {
+.next-project > .container > .text > h2 {
   margin-right: 11rem;
+  font-size: 2.2rem;
 }
-#next-project .container .text h5 i {
+.next-project > .container > .text > h5 {
+  font-size: 0.7rem;
+}
+.next-project > .container > .text > h5 > i {
   color: var(--color-secondary);
   padding-right: 0.5rem;
 }
-#next-project .container .text p {
-  margin-top: 1rem;
+.next-project > .container > .text > p {
   margin-left: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 #our-services .bg-gray {
@@ -2444,7 +2427,7 @@ h6 {
   padding: 1.5rem 1.5rem;
   background-color: var(--color-primary);
 }
-.call-box .box-header h3 {
+.call-box .box-header > h3 {
   color: var(--color-accent);
   font-size: 25pt;
 }
@@ -2595,7 +2578,7 @@ h6 {
   max-width: 150px;
   margin: 1rem;
 }
-.partners .container .partner img {
+.partners .container .partner > img {
   max-width: 100%;
   height: auto;
   display: block;
