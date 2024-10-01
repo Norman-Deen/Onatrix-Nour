@@ -18,7 +18,7 @@
                 height: auto;
             }
 
-           > h5 {
+            > h5 {
                 font-weight: 400;
                 font-style: oblique;
                 margin-top: 1rem;
@@ -29,17 +29,21 @@
             flex: 2;
             padding: 2rem;
 
-           > h4 {
+            > h4 {
                 font-weight: 400;
                 font-style: oblique;
             }
 
-          > h6 {
-                margin-top:1rem;
-                font-size:0.95rem;
+            > h6 {
+                margin-top: 1rem;
+                font-size: 0.95rem;
                 font-weight: 400;
                 color: var(--color-primary);
-                line-height: 1.75;
+
+                p {
+                    font-size: 0.9rem;
+                    line-height: 2.2rem;
+                }
             }
         }
     }

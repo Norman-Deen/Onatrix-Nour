@@ -1544,7 +1544,10 @@ a:hover, a:focus, a:active {
   font-size: 0.95rem;
   font-weight: 400;
   color: var(--color-primary);
-  line-height: 1.75;
+}
+.ceo .container .ceo-text > h6 p {
+  font-size: 0.9rem;
+  line-height: 2.2rem;
 }
 
 .reviews {
