@@ -28,7 +28,8 @@
             div {
                 .btn {
                     margin-bottom: 5rem;
-                    font-weight: 750;
+                    margin-top:    1rem;
+                    font-weight:    700;
                 }
             }
         }
@@ -50,11 +51,15 @@
         .content {
             width: 50%;
 
+            .signature-image {
+                margin: 1rem 0;
+            }
+
             .quote {
                 font-size: 15pt;
                 font-style: italic;
                 font-weight: 300;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -136,8 +141,6 @@
         }
     }
 }
-
-
 
 
 
@@ -223,7 +226,6 @@
         }
     }
 }
-
 
 
 

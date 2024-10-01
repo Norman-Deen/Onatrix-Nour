@@ -1,3 +1,6 @@
+@import '../mixins/_mixins-typography.scss';
+
+
 a{
     display: inline-block;
     @include text;

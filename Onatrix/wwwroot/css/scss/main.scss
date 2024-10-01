@@ -1,29 +1,11 @@
 ﻿// put mixins always at top
 
 
-@import "./mixins/mixins-media.scss";
-@import "./mixins/mixins-typography.scss";
-@import "./mixins/mixins-buttons.scss";
-@import "colors/mixins/_mixins-colors.scss";
-
-@import "./misc/base.scss";
-@import "./components/container.scss";
-@import "./components/links.scss";
-@import "./components/buttons.scss";
-@import "./components/typography.scss";
-@import "./components/banner.scss";
-
-
-@import "./colors/_colors.scss";
-@import "./colors/base";
-@import "./colors/links";
-@import "./colors/buttons";
-@import "./colors/headings";
-@import "./colors/backgrounds";
-
-
-@import "./pages/pages.scss";
-@import "./sections/sections.scss";
+@import "./mixins/_0mixins.scss";
+@import "./components/_0components.scss";
+@import "./colors/_0colors.scss";
+@import "./pages/_0pages.scss";
+@import "./sections/_0sections.scss";
 
 
 

@@ -1,3 +1,5 @@
+@import '../mixins/_mixins-typography.scss';
+
 p{
     margin: 0;
     padding-top: 0rem;
@@ -6,6 +8,7 @@ p{
 
 
 h1, h2, h3, h4, h5, h6{
+
     @include heading;
     margin-top: 0;
     margin-bottom: 0.5em;

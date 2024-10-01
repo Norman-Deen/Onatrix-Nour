@@ -1,16 +1,16 @@
 .footer {
-   > .container {
+    > .container {
         display: flex;
         justify-content: start;
         align-items: center;
-        padding-top: 1rem;
+        padding: 1rem 0;
 
-      >  .rights {
+        > .rights {
             display: block;
             color: var(--color-primary);
         }
 
-      >  .left {
+        > .left {
             margin-left: 0.5rem;
             color: var(--color-light);
         }
