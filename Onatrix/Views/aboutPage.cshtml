@@ -3,19 +3,20 @@
 @inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
 
 @{
-	Layout                         = "mainLayout.cshtml";
-    ViewBag.Title                  = Model?.Value("pageTitle") ?? null;
+	Layout                     = "mainLayout.cshtml";
+    ViewBag.Title              = Model?.Value("pageTitle") ?? null;
 
-    var ourExpertsMoreExpert1Image = Model?.Value<IPublishedContent>("ourExpertsMoreExpert1Image")?.Url() ?? "";
-    var ourExpertsMoreExpert2Image = Model?.Value<IPublishedContent>("ourExpertsMoreExpert2Image")?.Url() ?? "";
-    var ourExpertsMoreExpert3Image = Model?.Value<IPublishedContent>("ourExpertsMoreExpert3Image")?.Url() ?? "";
-    var ourExpertsMoreExpert4Image = Model?.Value<IPublishedContent>("ourExpertsMoreExpert4Image")?.Url() ?? "";
-    var ourExpertsExpert1Image     = Model?.Value<IPublishedContent>("ourExpertsExpert1Image")?.Url() ?? "";
-    var ourExpertsExpert2Image     = Model?.Value<IPublishedContent>("ourExpertsExpert2Image")?.Url() ?? "";
-    var ourExpertsExpert3Image     = Model?.Value<IPublishedContent>("ourExpertsExpert3Image")?.Url() ?? "";
-    var aboutBackgroundImage       = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
-    var reviewsImage               = Model?.Value<IPublishedContent>("reviewsImage")?.Url() ?? "";
-    var ceoImage                   = Model?.Value<IPublishedContent>("ceoImage")?.Url() ?? "";
+    var Expert1Image           = Model?.Value<IPublishedContent>("Expert1Image")?.Url() ?? "";
+    var Expert2Image           = Model?.Value<IPublishedContent>("Expert2Image")?.Url() ?? "";
+    var Expert3Image           = Model?.Value<IPublishedContent>("Expert3Image")?.Url() ?? "";
+    var Expert4Image           = Model?.Value<IPublishedContent>("Expert4Image")?.Url() ?? "";
+    var Expert5Image           = Model?.Value<IPublishedContent>("Expert5Image")?.Url() ?? "";
+    var Expert6Image           = Model?.Value<IPublishedContent>("Expert6Image")?.Url() ?? "";
+    var Expert7Image           = Model?.Value<IPublishedContent>("Expert7Image")?.Url() ?? "";
+                               
+    var aboutBackgroundImage   = Model?.Value<IPublishedContent>("aboutBackgroundImage")?.Url() ?? "";
+    var reviewsImage           = Model?.Value<IPublishedContent>("reviewsImage")?.Url() ?? "";
+    var ceoImage               = Model?.Value<IPublishedContent>("ceoImage")?.Url() ?? "";
 }
 
 
@@ -37,7 +38,7 @@
 </section>
 
 
-<!------------------CEO------------------->
+<!------------CEO--------------->
 <section class="ceo">
     <div class="container">
         <div class="ceo-image">
@@ -81,7 +82,7 @@
 </section>
 
 
-<!------------our-experts---------------->
+<!---------our-experts----------->
 <section class="our-experts">
 
     <div class="container">
@@ -90,77 +91,65 @@
             <h2>@Model?.Value("ourExpertsHeading")</h2>
         </div>
 
-        <!------------------Expert1------------------->
+        <!------------------Expert A------------------->
         <div class="content-expert">
             <div class="our-expert">
                 <div class="image">
-                    <img src="@ourExpertsExpert1Image" alt="Image of @Model?.Value("ourExpertsExpert1Name")">
+                    <img src="@Expert1Image" alt="Image of @Model?.Value("Expert1Image")">
                 </div>
-
-                <h4>@Model?.Value("ourExpertsExpert1Name")</h4>
-                <p>@Model?.Value("ourExpertsExpert1Text")</p>
+                <h4>@Model?.Value("Expert1Name")</h4>
+                <p>@Model?.Value("Expert1Text")</p>
             </div>
-
             <div class="our-expert">
                 <div class="image">
-                    <img src="@ourExpertsExpert2Image" alt="Image of @Model?.Value("ourExpertsExpert2Name")">
+                    <img src="@Expert2Image" alt="Image of @Model?.Value("Expert2Image")">
                 </div>
-
-                <h4>@Model?.Value("ourExpertsExpert2Name")</h4>
-                <p>@Model?.Value("ourExpertsExpert2Text")</p>
+                <h4>@Model?.Value("Expert2Name")</h4>
+                <p>@Model?.Value("Expert2Text")</p>
             </div>
-
             <div class="our-expert">
                 <div class="image">
-                    <img src="@ourExpertsExpert3Image" alt="Image of @Model?.Value("ourExpertsExpert3Name")">
+                    <img src="@Expert3Image" alt="Image of @Model?.Value("Expert3Image")">
                 </div>
-
-                <h4>@Model?.Value("ourExpertsExpert3Name")</h4>
-                <p>@Model?.Value("ourExpertsExpert3Text")</p>
+                <h4>@Model?.Value("Expert3Name")</h4>
+                <p>@Model?.Value("Expert3Text")</p>
             </div>
         </div>
 
 
-
-        <!------------------Expert2------------------->
+        <!------------------Expert B------------------->
         <div class="content-more-expert">
             <div class="our-expert">
                 <div class="image">
-                    <img src="@ourExpertsMoreExpert1Image" alt="Image of @Model?.Value("ourExpertsMoreExpert1Name")">
+                    <img src="@Expert4Image" alt="Image of @Model?.Value("Expert4Image")">
                 </div>
-
-                <h5>@Model?.Value("ourExpertsMoreExpert1Name")</h5>
-                <p>@Model?.Value("ourExpertsMoreExpert1Text")</p>
+                <h5>@Model?.Value("Expert4Name")</h5>
+                <p>@Model?.Value("Expert4Text")</p>
             </div>
-
             <div class="our-expert">
                 <div class="image">
-                    <img src="@ourExpertsMoreExpert2Image" alt="Image of @Model?.Value("ourExpertsMoreExpert2Name")">
+                    <img src="@Expert5Image" alt="Image of @Model?.Value("Expert5Image")">
                 </div>
-
-                <h5>@Model?.Value("ourExpertsMoreExpert2Name")</h5>
-                <p>@Model?.Value("ourExpertsMoreExpert2Text")</p>
+                <h5>@Model?.Value("Expert5Name")</h5>
+                <p>@Model?.Value("Expert5Text")</p>
             </div>
-
             <div class="our-expert">
                 <div class="image">
-                    <img src="@ourExpertsMoreExpert3Image" alt="Image of @Model?.Value("ourExpertsMoreExpert3Name")">
+                    <img src="@Expert6Image" alt="Image of @Model?.Value("Expert6Image")">
                 </div>
-
-                <h5>@Model?.Value("ourExpertsMoreExpert3Name")</h5>
-                <p>@Model?.Value("ourExpertsMoreExpert3Text")</p>
+                <h5>@Model?.Value("Expert6Name")</h5>
+                <p>@Model?.Value("Expert6Text")</p>
             </div>
-
             <div class="our-expert">
                 <div class="image">
-                    <img src="@ourExpertsMoreExpert4Image" alt="Image of @Model?.Value("ourExpertsMoreExpert4Name")">
+                    <img src="@Expert7Image" alt="Image of @Model?.Value("Expert7Image")">
                 </div>
-
-                <h5>@Model?.Value("ourExpertsMoreExpert4Name")</h5>
-                <p>@Model?.Value("ourExpertsMoreExpert4Text")</p>
+                <h5>@Model?.Value("Expert7Name")</h5>
+                <p>@Model?.Value("Expert7Text")</p>
             </div>
-        </div>  
-    </div>
+        </div>
+
+
 </section>
 
 

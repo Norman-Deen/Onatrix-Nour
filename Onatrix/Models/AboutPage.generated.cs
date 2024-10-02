@@ -130,76 +130,172 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString CeoText => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "ceoText");
 
 		///<summary>
-		/// Our Experts - Expert 1 - Image
+		/// Expert 1 - Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert1Image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops OurExpertsExpert1Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "ourExpertsExpert1Image");
+		[ImplementPropertyType("expert1Image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Expert1Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "expert1Image");
 
 		///<summary>
-		/// Our Experts - Expert 1 - Name
+		/// Expert 1 - Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert1Name")]
-		public virtual string OurExpertsExpert1Name => this.Value<string>(_publishedValueFallback, "ourExpertsExpert1Name");
+		[ImplementPropertyType("expert1Name")]
+		public virtual string Expert1Name => this.Value<string>(_publishedValueFallback, "expert1Name");
 
 		///<summary>
-		/// Our Experts - Expert 1 - Text
+		/// Expert 1 - Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert1Text")]
-		public virtual string OurExpertsExpert1Text => this.Value<string>(_publishedValueFallback, "ourExpertsExpert1Text");
+		[ImplementPropertyType("expert1Text")]
+		public virtual string Expert1Text => this.Value<string>(_publishedValueFallback, "expert1Text");
 
 		///<summary>
-		/// Our Experts - Expert 2 - Image
+		/// Expert 2 - Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert2Image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops OurExpertsExpert2Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "ourExpertsExpert2Image");
+		[ImplementPropertyType("expert2Image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Expert2Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "expert2Image");
 
 		///<summary>
-		/// Our Experts - Expert 2 - Name
+		/// Expert 2 - Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert2Name")]
-		public virtual string OurExpertsExpert2Name => this.Value<string>(_publishedValueFallback, "ourExpertsExpert2Name");
+		[ImplementPropertyType("expert2Name")]
+		public virtual string Expert2Name => this.Value<string>(_publishedValueFallback, "expert2Name");
 
 		///<summary>
-		/// Our Experts - Expert 2 - Text
+		/// Expert 2 - Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert2Text")]
-		public virtual string OurExpertsExpert2Text => this.Value<string>(_publishedValueFallback, "ourExpertsExpert2Text");
+		[ImplementPropertyType("expert2Text")]
+		public virtual string Expert2Text => this.Value<string>(_publishedValueFallback, "expert2Text");
 
 		///<summary>
-		/// Our Experts - Expert 3 - Image
+		/// Expert 3 - Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert3Image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops OurExpertsExpert3Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "ourExpertsExpert3Image");
+		[ImplementPropertyType("expert3Image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Expert3Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "expert3Image");
 
 		///<summary>
-		/// Our Experts - Expert 3 - Name
+		/// Expert 3 - Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert3Name")]
-		public virtual string OurExpertsExpert3Name => this.Value<string>(_publishedValueFallback, "ourExpertsExpert3Name");
+		[ImplementPropertyType("expert3Name")]
+		public virtual string Expert3Name => this.Value<string>(_publishedValueFallback, "expert3Name");
 
 		///<summary>
-		/// Our Experts - Expert 3 - Text
+		/// Expert 3 - Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsExpert3Text")]
-		public virtual string OurExpertsExpert3Text => this.Value<string>(_publishedValueFallback, "ourExpertsExpert3Text");
+		[ImplementPropertyType("expert3Text")]
+		public virtual string Expert3Text => this.Value<string>(_publishedValueFallback, "expert3Text");
+
+		///<summary>
+		/// Expert 4 - Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert4Image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Expert4Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "expert4Image");
+
+		///<summary>
+		/// Expert 4 - Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert4Name")]
+		public virtual string Expert4Name => this.Value<string>(_publishedValueFallback, "expert4Name");
+
+		///<summary>
+		/// Expert 4 - Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert4Text")]
+		public virtual string Expert4Text => this.Value<string>(_publishedValueFallback, "expert4Text");
+
+		///<summary>
+		/// Expert 5 - Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert5Image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Expert5Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "expert5Image");
+
+		///<summary>
+		/// Expert 5 - Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert5Name")]
+		public virtual string Expert5Name => this.Value<string>(_publishedValueFallback, "expert5Name");
+
+		///<summary>
+		/// Expert 5 - Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert5Text")]
+		public virtual string Expert5Text => this.Value<string>(_publishedValueFallback, "expert5Text");
+
+		///<summary>
+		/// Expert 6 - Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert6Image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Expert6Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "expert6Image");
+
+		///<summary>
+		/// Expert 6 - Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert6Name")]
+		public virtual string Expert6Name => this.Value<string>(_publishedValueFallback, "expert6Name");
+
+		///<summary>
+		/// Expert 6 - Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert6Text")]
+		public virtual string Expert6Text => this.Value<string>(_publishedValueFallback, "expert6Text");
+
+		///<summary>
+		/// Expert 7 - Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert7Image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Expert7Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "expert7Image");
+
+		///<summary>
+		/// Expert 7 - Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert7Name")]
+		public virtual string Expert7Name => this.Value<string>(_publishedValueFallback, "expert7Name");
+
+		///<summary>
+		/// Expert 7 - Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("expert7Text")]
+		public virtual string Expert7Text => this.Value<string>(_publishedValueFallback, "expert7Text");
 
 		///<summary>
 		/// Our Experts - Heading
@@ -216,102 +312,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("ourExpertsHeadline")]
 		public virtual string OurExpertsHeadline => this.Value<string>(_publishedValueFallback, "ourExpertsHeadline");
-
-		///<summary>
-		/// Our Experts - More Expert 1 - Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert1Image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops OurExpertsMoreExpert1Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "ourExpertsMoreExpert1Image");
-
-		///<summary>
-		/// Our Experts - More Expert 1 - Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert1Name")]
-		public virtual string OurExpertsMoreExpert1Name => this.Value<string>(_publishedValueFallback, "ourExpertsMoreExpert1Name");
-
-		///<summary>
-		/// Our Experts - More Expert 1 - Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert1Text")]
-		public virtual string OurExpertsMoreExpert1Text => this.Value<string>(_publishedValueFallback, "ourExpertsMoreExpert1Text");
-
-		///<summary>
-		/// Our Experts - More Expert 2 - Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert2Image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops OurExpertsMoreExpert2Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "ourExpertsMoreExpert2Image");
-
-		///<summary>
-		/// Our Experts - More Expert 2 - Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert2Name")]
-		public virtual string OurExpertsMoreExpert2Name => this.Value<string>(_publishedValueFallback, "ourExpertsMoreExpert2Name");
-
-		///<summary>
-		/// Our Experts - More Expert 2 - Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert2Text")]
-		public virtual string OurExpertsMoreExpert2Text => this.Value<string>(_publishedValueFallback, "ourExpertsMoreExpert2Text");
-
-		///<summary>
-		/// Our Experts - More Expert 3 - Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert3Image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops OurExpertsMoreExpert3Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "ourExpertsMoreExpert3Image");
-
-		///<summary>
-		/// Our Experts - More Expert 3 - Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert3Name")]
-		public virtual string OurExpertsMoreExpert3Name => this.Value<string>(_publishedValueFallback, "ourExpertsMoreExpert3Name");
-
-		///<summary>
-		/// Our Experts - More Expert 3 - Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert3Text")]
-		public virtual string OurExpertsMoreExpert3Text => this.Value<string>(_publishedValueFallback, "ourExpertsMoreExpert3Text");
-
-		///<summary>
-		/// Our Experts - More Expert 4 - Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert4Image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops OurExpertsMoreExpert4Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "ourExpertsMoreExpert4Image");
-
-		///<summary>
-		/// Our Experts - More Expert 4 - Name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert4Name")]
-		public virtual string OurExpertsMoreExpert4Name => this.Value<string>(_publishedValueFallback, "ourExpertsMoreExpert4Name");
-
-		///<summary>
-		/// Our Experts - More Expert 4 - Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.2.0+1b21caa")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ourExpertsMoreExpert4Text")]
-		public virtual string OurExpertsMoreExpert4Text => this.Value<string>(_publishedValueFallback, "ourExpertsMoreExpert4Text");
 
 		///<summary>
 		/// Page Title
