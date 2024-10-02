@@ -44,15 +44,16 @@
                 font-weight: 600;
             }
         }
-
         //section 02
         .recent-projects {
-           display:flex;
+            display: flex;
             gap: 1rem;
-          
-            > img {}
 
-            > .text-group {}
+            > img {
+            }
+
+            > .text-group {
+            }
         }
 
         > .tag-group {
@@ -80,7 +81,6 @@
             }
         }
     }
-
     // Right section (side-bar)
     .side-bar {
         display: flex;

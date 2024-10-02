@@ -1887,15 +1887,10 @@ a:hover, a:focus, a:active {
   padding-bottom: 1.8rem;
   border-bottom: 1px solid var(--color-border-primary);
 }
-.Our-Projects .Our-Projects-content > .project > .project-img {
-  overflow: hidden;
-  max-height: 220px;
-  width: 100%;
-}
 .Our-Projects .Our-Projects-content > .project > .project-img > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* عرض الصورة بالكامل */
+  height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+  object-fit: cover; /* لقص الصورة إذا كانت كبيرة جداً مع الحفاظ على النسبة */
 }
 .Our-Projects .Our-Projects-content > .project .project-text {
   display: flex;
@@ -2384,7 +2379,7 @@ a:hover, a:focus, a:active {
   padding-right: 0.5rem;
 }
 .next-project > .container > .text > p {
-  margin-left: 1.8rem;
+  margin-left: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -2545,7 +2540,7 @@ a:hover, a:focus, a:active {
   top: 100%;
   left: 0;
   right: 0;
-  background: #fff;
+  background: var(--color-light);
   border: 1.5px solid var(--color-border-gray);
   border-top: 0;
   opacity: 0;
@@ -2558,33 +2553,18 @@ a:hover, a:focus, a:active {
   padding: 0 22px;
   font-size: 9pt;
   font-weight: 300;
-  color: #3b3b3b;
+  color: var(--color-default);
   line-height: 40px;
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.2s;
 }
 .call-box form .select-wrapper .select .options .option:hover {
-  background-color: #b2b2b2;
+  background-color: var(--color-border-gray);
 }
 .call-box form .select-wrapper .select .options .option.selected {
   background-color: var(--clr-green);
-  color: #fff;
-}
-.call-box form .select-wrapper .select.open .options {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-.call-box form .select-wrapper .select.open .option {
-  opacity: 1;
-  transform: translateY(0);
-}
-.call-box form .select-wrapper .select.open .arrow::before {
-  transform: rotate(-45deg);
-}
-.call-box form .select-wrapper .select.open .arrow::after {
-  transform: rotate(45deg);
+  color: var(--color-light);
 }
 
 .partners {

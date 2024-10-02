@@ -1,30 +1,16 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-	Layout = "mainLayout.cshtml"; 
-    ViewBag.Title = Model?.Value("pageTitle") ?? null;
-
-
-
-
-
-
+	Layout                      = "mainLayout.cshtml"; 
+    ViewBag.Title               = Model?.Value("pageTitle") ?? null;
 
     var projectsBackgroundImage = Model?.Value<IPublishedContent>("projectsBackgroundImage")?.Url() ?? "";
-
-
-
-
-
-
-
-    var lOurProjectsImage01   = Model?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
-    var lOurProjectsImage02   = Model?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
-    var lOurProjectsImage03   = Model?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
-    var lOurProjectsImage04   = Model?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
-
-    var ProjectsDetailsLink01 = Model?.Value<string>("ProjectsDetailsLink01") ?? "#";
-}
+    var lOurProjectsImage01     = Model?.Value<IPublishedContent>("lOurProjectsImage01")?.Url() ?? "";
+    var lOurProjectsImage02     = Model?.Value<IPublishedContent>("lOurProjectsImage02")?.Url() ?? "";
+    var lOurProjectsImage03     = Model?.Value<IPublishedContent>("lOurProjectsImage03")?.Url() ?? "";
+    var lOurProjectsImage04     = Model?.Value<IPublishedContent>("lOurProjectsImage04")?.Url() ?? "";
+    var ProjectsDetailsLink01   = Model?.Value<string>("ProjectsDetailsLink01") ?? "#";
+}                               
 
 
 
