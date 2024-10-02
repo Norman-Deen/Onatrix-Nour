@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         padding-right: 12rem;
-        border-right: 1px solid var(--color-border-primary);
+        border-right: 1px solid var(--color-border-gray);
         gap: 2rem;
         max-width: 70%;
 
@@ -19,7 +19,7 @@
             gap: 2rem;
             align-items: center;
             padding-bottom: 1.8rem;
-            border-bottom: 1px solid var(--color-border-primary);
+            border-bottom: 1px solid var(--color-border-gray);
 
             > .project-img > img {
                 width: 100%; /* عرض الصورة بالكامل */
