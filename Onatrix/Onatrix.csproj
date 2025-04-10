@@ -11,9 +11,10 @@
     <None Include="compilerconfig.json" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Umbraco.Cms" Version="14.2.0" />
-  </ItemGroup>
+<ItemGroup>
+  <PackageReference Include="Umbraco.Cms" Version="14.3.2" />
+</ItemGroup>
+
 
   <ItemGroup>
     <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
