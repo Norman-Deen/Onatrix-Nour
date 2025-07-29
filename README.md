@@ -61,10 +61,8 @@ Onatrix/
 
 ---
 
-## 📄 License
-
-This project is provided for educational or demo purposes.
-Feel free to fork and adapt it for your own needs.
+📄 License
+This project was created as part of a course assignment at EC Utbildning. It is available for educational or demonstration purposes only. 
 
 ---
 
